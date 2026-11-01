@@ -52,7 +52,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "app"))
 import ksm_core  # noqa: E402
 
-BASE = os.path.abspath(os.path.join(HERE, "..", "..", "Corne", "SOFLE_FINAL_HOMOLOGADO_v01.vil"))
+FIXTURE_BASE = os.path.abspath(os.path.join(HERE, "..", "data", "fixtures", "SOFLE_FINAL_HOMOLOGADO_v01.vil"))
+EXTERNAL_BASE = os.path.abspath(os.path.join(HERE, "..", "..", "Corne", "SOFLE_FINAL_HOMOLOGADO_v01.vil"))
+BASE = FIXTURE_BASE if os.path.exists(FIXTURE_BASE) else EXTERNAL_BASE
+
+FIXTURE_VALID_SET = os.path.abspath(os.path.join(HERE, "..", "data", "fixtures", "qmk_valid_set.json"))
 QMK_REPO = os.path.abspath(os.path.join(
     HERE, "..", "..", "sofle", "_research", "repos", "dinesh0430_full-hope-vial-qmk"))
 
@@ -86,25 +90,33 @@ def zkp_key_to_qkc(tok):
 # ---------------------------------------------------------------- validação de keycodes
 def _build_valid_set():
     """VALID_SET = nomes KC_/RGB_ do homologado (prova real do Vial local)
-    ∪ "key" canônicos QMK ∪ aliases QMK (hjson do repo de pesquisa pinnado)."""
+    ∪ "key" canônicos QMK ∪ aliases QMK (carregados da fixture qmk_valid_set.json
+    ou inspecionados dinamicamente no repo QMK)."""
     valid = set()
-    homolog = json.load(open(BASE, encoding="utf-8"))
-    for layer in homolog.get("layout", []):
-        for row in layer:
-            for cell in row:
-                for t in re.findall(r"(?:KC|RGB)_[A-Z0-9_]+", str(cell)):
-                    valid.add(t)
-    for f in glob.glob(os.path.join(QMK_REPO, "data", "constants", "keycodes", "**", "*.hjson"),
-                       recursive=True):
+    if os.path.exists(FIXTURE_VALID_SET):
         try:
-            txt = open(f, encoding="utf-8", errors="replace").read()
-        except OSError:
-            continue
-        for m in re.finditer(r'"key":\s*"(KC_[A-Z0-9_]+|RGB_[A-Z0-9_]+|RGB[A-Z_0-9]*|[A-Z]{2,}[A-Z0-9_]*)"', txt):
-            valid.add(m.group(1))
-        for m in re.finditer(r'"aliases":\s*\[([^\]]*)\]', txt):
-            for al in re.findall(r'"([A-Z0-9_]+)"', m.group(1)):
-                valid.add(al)
+            valid.update(json.load(open(FIXTURE_VALID_SET, encoding="utf-8")))
+        except Exception:
+            pass
+    if os.path.exists(BASE):
+        homolog = json.load(open(BASE, encoding="utf-8"))
+        for layer in homolog.get("layout", []):
+            for row in layer:
+                for cell in row:
+                    for t in re.findall(r"(?:KC|RGB)_[A-Z0-9_]+", str(cell)):
+                        valid.add(t)
+    if os.path.exists(QMK_REPO):
+        for f in glob.glob(os.path.join(QMK_REPO, "data", "constants", "keycodes", "**", "*.hjson"),
+                           recursive=True):
+            try:
+                txt = open(f, encoding="utf-8", errors="replace").read()
+            except OSError:
+                continue
+            for m in re.finditer(r'"key":\s*"(KC_[A-Z0-9_]+|RGB_[A-Z0-9_]+|RGB[A-Z_0-9]*|[A-Z]{2,}[A-Z0-9_]*)"', txt):
+                valid.add(m.group(1))
+            for m in re.finditer(r'"aliases":\s*\[([^\]]*)\]', txt):
+                for al in re.findall(r'"([A-Z0-9_]+)"', m.group(1)):
+                    valid.add(al)
     return valid
 
 VALID_SET = _build_valid_set()
