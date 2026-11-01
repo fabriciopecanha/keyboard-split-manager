@@ -135,15 +135,12 @@ async function partB() {
   try {
     pw = require("playwright");
   } catch (e) {
-    const homedir = os.homedir();
-    for (const p of [
-      path.join(homedir, ".npm", "_npx", "9833c18b2d85bc59", "node_modules", "playwright"),
-      path.join(homedir, ".npm", "_npx", "e41f203b7505f1fb", "node_modules", "playwright")
-    ]) {
-      try { pw = require(p); break; } catch (e2) {}
-    }
+    pw = null;
   }
-  if (!pw) { rec("playwright disponível", false, "playwright não encontrado via require('playwright') nem no cache npm"); return; }
+  if (!pw) {
+    rec("playwright disponível", false, "playwright não encontrado (execute: npm ci ou npm install)");
+    return;
+  }
   rec("playwright disponível", true, "módulo playwright disponível");
 
   const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), "ksm-chrome-"));

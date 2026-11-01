@@ -3,17 +3,10 @@ const path = require("path");
 const { execSync } = require("child_process");
 
 let pw;
-try { pw = require("playwright"); } catch (e) {
-  const homedir = require("os").homedir();
-  for (const p of [
-    path.join(homedir, ".npm/_npx/9833c18b2d85bc59/node_modules/playwright"),
-    path.join(homedir, ".npm/_npx/e41f203b7505f1fb/node_modules/playwright")
-  ]) {
-    try { pw = require(p); break; } catch (e2) {}
-  }
-}
-if (!pw) {
-  console.error("Playwright não encontrado (execute: npm install playwright)");
+try {
+  pw = require("playwright");
+} catch (e) {
+  console.error("Playwright não encontrado (execute: npm ci ou npm install)");
   process.exit(1);
 }
 
