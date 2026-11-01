@@ -1,0 +1,318 @@
+/*
+ * CORNE 42 (ZMK) — CANDIDATO (ksm-work/generators/generate_corne_candidato.py)
+ * Hash canônico do dataset: cab6ba746107d9ee15f98cfd10614c09f5ecede9815913ced756316a2e405bd3
+ * Versão: v06_consolidada | Arquivo: keymap_data_v06.json
+ * Precedência: alterações salvas no ZMK Studio prevalecem sobre mapa compilado.
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+
+/ {
+    behaviors {
+        /* HRM Left (GACS) */
+        hrm_l: home_row_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-on-release;
+            bindings = <&kp &kp>;
+            display-name = "HRM Left (GACS)";
+        };
+
+        /* HRM Right (GACS) */
+        hrm_r: home_row_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-on-release;
+            bindings = <&kp &kp>;
+            display-name = "HRM Right (GACS)";
+        };
+
+        /* Repeat MEDIA (Dedão 36) */
+        ht_rep_media: thumb_repeat_media {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo &key_repeat>;
+            display-name = "Repeat MEDIA (Dedão 36)";
+        };
+
+        /* Undo FUN (Dedão 41) */
+        ht_undo_fun: thumb_undo_fun {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo &kp>;
+            display-name = "Undo FUN (Dedão 41)";
+        };
+
+        /* Hold Reset 2s Seguro */
+        ht_rst: hold_reset {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <2000>;
+            bindings = <&sys_reset &none>;
+            display-name = "Hold Reset 2s Seguro";
+        };
+
+        /* Hold Bootloader 2s Seguro */
+        ht_boot: hold_bootloader {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <2000>;
+            bindings = <&bootloader &none>;
+            display-name = "Hold Bootloader 2s Seguro";
+        };
+
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <24 35>; /* Caps Lock (Shift esquerdo + Esc/L9 nas posicoes 24 e 35) */
+            bindings = <&kp CAPS>;
+            layers = <0>;
+        };
+        combo_cedilla {
+            timeout-ms = <50>;
+            key-positions = <27 32>; /* Cedilha ç (C + Vírgula) */
+            bindings = <&kp LA(C)>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        macro_diff: macro_diff {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "!=";
+            bindings = <&kp EXCL &kp EQUAL>;
+        };
+        strudel_s: strudel_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "s(\"\")";
+            bindings = <&kp S &kp LPAR &kp DQT &kp DQT &kp RPAR &kp LEFT &kp LEFT>;
+        };
+        strudel_note: strudel_note {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "note(\"\")";
+            bindings = <&kp N &kp O &kp T &kp E &kp LPAR &kp DQT &kp DQT &kp RPAR &kp LEFT &kp LEFT>;
+        };
+        strudel_mute: strudel_mute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "_$: ";
+            bindings = <&kp UNDER &kp DLLR &kp COLON &kp SPACE>;
+        };
+        strudel_pat: strudel_pat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "$: ";
+            bindings = <&kp DLLR &kp COLON &kp SPACE>;
+        };
+        strudel_stack: strudel_stack {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "stack()";
+            bindings = <&kp S &kp T &kp A &kp C &kp K &kp LPAR &kp RPAR &kp LEFT>;
+        };
+        strudel_slow: strudel_slow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = ".slow()";
+            bindings = <&kp DOT &kp S &kp L &kp O &kp W &kp LPAR &kp RPAR &kp LEFT>;
+        };
+        strudel_fast: strudel_fast {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = ".fast()";
+            bindings = <&kp DOT &kp F &kp A &kp S &kp T &kp LPAR &kp RPAR &kp LEFT>;
+        };
+        strudel_room: strudel_room {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = ".room()";
+            bindings = <&kp DOT &kp R &kp O &kp O &kp M &kp LPAR &kp RPAR &kp LEFT>;
+        };
+        strudel_delay: strudel_delay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = ".delay()";
+            bindings = <&kp DOT &kp D &kp E &kp L &kp A &kp Y &kp LPAR &kp RPAR &kp LEFT>;
+        };
+        strudel_orbit: strudel_orbit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = ".orbit()";
+            bindings = <&kp DOT &kp O &kp R &kp B &kp I &kp T &kp LPAR &kp RPAR &kp LEFT>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        system_tri_layer {
+            if-layers = <2 4>; /* Space (L2) + Enter (L4) simultâneos ativam L6 SYSTEM */
+            then-layer = <6>;
+        };
+    };
+
+    /* KEYMAP CANÔNICO: 42 teclas × 10 camadas */
+    keymap {
+        compatible = "zmk,keymap";
+
+        /* L0: BASE (QWERTY) */
+        layer_0 {
+            display-name = "BASE";
+            bindings = <
+                &kp TAB          &kp Q            &kp W            &kp E            &kp R            &kp T    &kp Y            &kp U            &kp I            &kp O            &kp P            &kp BSPC
+                &kp LCTRL        &hrm_l LCTRL A   &hrm_l LALT S    &hrm_l LGUI D    &hrm_l LSHFT F   &kp G    &kp H            &hrm_r RSHFT J   &hrm_r RGUI K    &hrm_r RALT L    &hrm_r RCTRL SEMI &kp SQT
+                &kp LSHFT        &kp Z            &kp X            &kp C            &kp V            &kp B    &kp N            &kp M            &kp COMMA        &kp DOT          &kp FSLH         &lt 9 ESC
+                          &ht_rep_media 8 0 &lt 3 DEL        &lt 2 SPACE    &lt 4 RET        &lt 5 BSPC       &ht_undo_fun 7 LG(Z)
+            >;
+        };
+
+        /* L1: LIVE (Ableton Live 12) */
+        layer_1 {
+            display-name = "LIVE";
+            bindings = <
+                &kp TAB          &kp LA(LG(B))    &kp F10          &kp LS(TAB)      &kp F9           &kp C    &kp W            &kp MINUS        &kp PLUS         &kp LG(L)        &kp LG(U)        &to 0
+                &kp ESC          &kp O            &kp S            &kp N0           &kp B            &kp A    &kp LG(LS(Z))    &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp SQT
+                &kp LSHFT        &kp LG(Z)        &kp LG(X)        &kp LG(C)        &kp LG(V)        &kp LG(D)    &kp Z            &kp LG(N4)       &kp COMMA        &kp DOT          &kp X            &to 0
+                          &key_repeat      &to 0            &kp SPACE    &kp RET          &lt 5 BSPC       &kp LG(Z)
+            >;
+        };
+
+        /* L2: NAV (Navegação & Edição) */
+        layer_2 {
+            display-name = "NAV";
+            bindings = <
+                &kp ESC          &kp LG(Z)        &kp LG(X)        &kp LG(C)        &kp LG(V)        &kp LG(LS(Z))    &kp INS          &kp LG(UP)       &kp PG_DN        &kp PG_UP        &kp LG(DOWN)     &kp BSPC
+                &kp LCTRL        &kp LCTRL        &kp LALT         &kp LGUI         &kp LSHFT        &kp LG(F)    &kp LG(LEFT)     &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp LG(RIGHT)
+                &kp LSHFT        &kp LG(A)        &kp LG(LS(TAB))  &kp LG(TAB)      &kp LC(LA(T))    &kp CAPS    &kp LA(LEFT)     &kp LA(RIGHT)    &kp LG(LS(LBKT)) &kp LG(LS(RBKT)) &kp LC(LEFT)     &kp LC(RIGHT)
+                          &key_repeat      &kp DEL          &trans    &mo 4            &kp BSPC         &kp LG(Z)
+            >;
+        };
+
+        /* L3: MOUSE (Cursor & Scroll) */
+        layer_3 {
+            display-name = "MOUSE";
+            bindings = <
+                &kp ESC          &kp LA(LEFT)     &kp LA(RIGHT)    &none            &none            &none    &none            &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP     &msc SCRL_RIGHT  &kp BSPC
+                &kp LCTRL        &kp LCTRL        &kp LALT         &kp LGUI         &kp LSHFT        &none    &none            &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP     &mmv MOVE_RIGHT  &none
+                &kp LSHFT        &kp LG(Z)        &kp LG(X)        &kp LG(C)        &kp LG(V)        &kp LG(LS(Z))    &none            &none            &none            &none            &none            &kp RSHFT
+                          &key_repeat      &trans           &kp SPACE    &mkp LCLK        &mkp RCLK        &mkp MCLK
+            >;
+        };
+
+        /* L4: SYM (Símbolos & Programação) */
+        layer_4 {
+            display-name = "SYM";
+            bindings = <
+                &kp ESC          &kp GRAVE        &kp TILDE        &kp CARET        &kp UNDER        &kp COLON    &kp PLUS         &kp MINUS        &kp ASTRK        &kp FSLH         &kp EQUAL        &macro_diff
+                &kp TAB          &kp LPAR         &kp RPAR         &kp LBKT         &kp RBKT         &kp LT    &kp EXCL         &kp RSHFT        &kp RGUI         &kp RALT         &kp RCTRL        &kp QMARK
+                &kp LSHFT        &kp LBRC         &kp RBRC         &kp BSLH         &kp PIPE         &kp GT    &kp AT           &kp HASH         &kp DLLR         &kp PRCNT        &kp AMPS         &kp DQT
+                          &key_repeat      &kp DEL          &mo 2    &trans           &kp BSPC         &kp LG(Z)
+            >;
+        };
+
+        /* L5: NUM (Teclado Numérico 3x3) */
+        layer_5 {
+            display-name = "NUM";
+            bindings = <
+                &kp ESC          &kp FSLH         &kp KP_N7        &kp KP_N8        &kp KP_N9        &kp ASTRK    &kp INS          &kp LG(UP)       &kp PG_DN        &kp PG_UP        &kp LG(DOWN)     &kp BSPC
+                &kp TAB          &kp MINUS        &kp KP_N4        &kp KP_N5        &kp KP_N6        &kp PLUS    &kp LG(LEFT)     &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp LG(RIGHT)
+                &kp LSHFT        &kp EQUAL        &kp KP_N1        &kp KP_N2        &kp KP_N3        &kp KP_N0    &kp LG(Z)        &kp LG(X)        &kp LG(C)        &kp LG(V)        &kp LG(LS(Z))    &kp RSHFT
+                          &kp COMMA        &kp DOT          &kp SPACE    &kp RET          &trans           &kp LG(Z)
+            >;
+        };
+
+        /* L6: SYSTEM (Hardware, BLE & Studio) */
+        layer_6 {
+            display-name = "SYSTEM";
+            bindings = <
+                &kp ESC          &ht_rst 0 0      &ht_boot 0 0     &out OUT_USB     &out OUT_BLE     &studio_unlock    &ht_rst 0 0      &ht_boot 0 0     &kp C_VOL_DN     &kp C_VOL_UP     &kp C_MUTE       &to 0
+                &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4    &bt BT_CLR       &kp C_BRI_DN     &kp C_BRI_UP     &kp LC(LG(Q))    &to 1            &to 9
+                &kp LSHFT        &none            &none            &none            &kp LG(LS(N4))   &kp CAPS    &none            &none            &none            &none            &none            &kp RSHFT
+                          &key_repeat      &kp DEL          &trans    &trans           &kp BSPC         &kp LG(Z)
+            >;
+        };
+
+        /* L7: FUN (Teclas F1–F12 & Sistema) */
+        layer_7 {
+            display-name = "FUN";
+            bindings = <
+                &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &kp F6    &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
+                &kp TAB          &kp PSCRN        &kp PAUSE_BREAK  &kp INS          &kp HOME         &kp PG_UP    &none            &kp RSHFT        &kp RGUI         &kp RALT         &kp RCTRL        &kp K_APP
+                &kp LSHFT        &kp DEL          &kp END          &kp PG_DN        &none            &none    &none            &none            &none            &none            &none            &kp RSHFT
+                          &key_repeat      &kp DEL          &kp SPACE    &kp RET          &kp BSPC         &trans
+            >;
+        };
+
+        /* L8: MEDIA (Controles de Mídia) */
+        layer_8 {
+            display-name = "MEDIA";
+            bindings = <
+                &kp ESC          &none            &none            &none            &none            &none    &none            &kp C_MUTE       &kp C_VOL_UP     &kp C_VOL_DN     &none            &kp BSPC
+                &kp TAB          &kp LCTRL        &kp LALT         &kp LGUI         &kp LSHFT        &none    &none            &kp C_PREV       &kp C_PLAY_PAUSE &kp C_NEXT       &kp C_STOP       &none
+                &kp LSHFT        &none            &none            &none            &none            &none    &none            &none            &none            &none            &none            &kp RSHFT
+                          &trans           &kp DEL          &kp SPACE    &kp RET          &kp BSPC         &kp LG(Z)
+            >;
+        };
+
+        /* L9: STRUDEL (Live Coding Musical) */
+        layer_9 {
+            display-name = "STRUDEL";
+            bindings = <
+                &kp LG(FSLH)     &kp LC(RET)      &kp LC(DOT)      &kp LG(MINUS)    &kp LG(PLUS)     &kp LG(N0)    &kp LG(UP)       &none            &kp PG_DN        &kp PG_UP        &kp LG(DOWN)     &to 0
+                &kp TAB          &strudel_s       &strudel_note    &strudel_mute    &strudel_pat     &strudel_stack    &kp LG(LEFT)     &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &none
+                &kp LSHFT        &strudel_slow    &strudel_fast    &strudel_room    &strudel_delay   &strudel_orbit    &kp LG(C)        &kp LG(V)        &kp LG(A)        &kp CAPS         &kp LG(X)        &to 0
+                          &key_repeat      &to 0            &kp SPACE    &kp RET          &kp BSPC         &kp LG(Z)
+            >;
+        };
+
+    };
+};

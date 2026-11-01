@@ -1,0 +1,538 @@
+{
+  "html": "/Users/fabriciopecanha/Developer/keyboards/ksm-work/deliverables/keyboard_split_manager_v06.html",
+  "total": 106,
+  "pass": 106,
+  "fail": 0,
+  "itens": [
+    {
+      "name": "html existe",
+      "ok": true,
+      "detail": "1580469 B"
+    },
+    {
+      "name": "html pacote modular (core+app blocks == 2, data presente)",
+      "ok": true,
+      "detail": "blocks=2 sizes=[30223, 85223] data=1442850 B"
+    },
+    {
+      "name": "core extraído do HTML final carregado",
+      "ok": true,
+      "detail": "canonicalize,canonicalString,canonicalHash,canonicalHashAsync,parseWithExactUid,parseJsonBigUid,uidText,sha256Hex,VOLATILE_KEYS,layerRows,layerThumbs,flatLayer,validateDataset,validateCorneLayer,validateSofleVil,CORNE_REF_LAYERS,auditLayerReachability"
+    },
+    {
+      "name": "paridade canônica embutido == dataset (F6/integridade real)",
+      "ok": true,
+      "detail": "{\"behaviors\":[{\"bindings\":[\"&kp\",\"&kp\"],\"display_name\":\"HRM …"
+    },
+    {
+      "name": "F4 uid exato: num + campo seguinte",
+      "ok": true,
+      "detail": "uid=\"12888985424971681029\""
+    },
+    {
+      "name": "F4 uid exato: num + fechamento",
+      "ok": true,
+      "detail": "uid=\"12888985424971681029\""
+    },
+    {
+      "name": "F4 uid exato: sem espaco + virgula",
+      "ok": true,
+      "detail": "uid=\"12888985424971681029\""
+    },
+    {
+      "name": "F4 uid exato: espaco + fechamento",
+      "ok": true,
+      "detail": "uid=\"12888985424971681029\""
+    },
+    {
+      "name": "F4 uid exato: num no fim do objeto com espaco",
+      "ok": true,
+      "detail": "uid=\"12888985424971681029\""
+    },
+    {
+      "name": "F4 parse dataset com campo numérico colado em uid-texto",
+      "ok": true,
+      "detail": "uid=\"12888985424971681029\""
+    },
+    {
+      "name": "F3 validação do dataset embutido (0 erros)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F3 recusa: sem profiles",
+      "ok": true,
+      "detail": "erros=3 profiles.candidato_teste (corne/sofle) ausente | profiles.baseline_instalado (corne/sofle) ausente"
+    },
+    {
+      "name": "F3 recusa: sem references",
+      "ok": true,
+      "detail": "erros=2 references.corne.native_layers ausente | references.sofle.vil ausente"
+    },
+    {
+      "name": "F3 recusa: matrix corne L0 reduzida a 1 tecla",
+      "ok": true,
+      "detail": "erros=2 camada L0/corne matrix deve ser 3x12 | perfis corne/L0: espelho divergente de layers.L0"
+    },
+    {
+      "name": "F3 recusa: dedões L0 corne vazios",
+      "ok": true,
+      "detail": "erros=2 camada L0/corne thumbs deve ter 6 | perfis corne/L0: espelho divergente de layers.L0"
+    },
+    {
+      "name": "F3 recusa: dedões L0 sofle vazios",
+      "ok": true,
+      "detail": "erros=2 camada L0/sofle thumbs deve ter 10 | perfis sofle/L0: espelho divergente de layers.L0"
+    },
+    {
+      "name": "F3 recusa: espelho profiles divergente",
+      "ok": true,
+      "detail": "erros=1 perfis corne/L0: espelho divergente de layers.L0"
+    },
+    {
+      "name": "F3 recusa: conflicts não-lista",
+      "ok": true,
+      "detail": "erros=1 campo conflicts deve ser lista (obrigatório no schema 6)"
+    },
+    {
+      "name": "F3 recusa: uid sofle não-string",
+      "ok": true,
+      "detail": "erros=1 references.sofle.vil.uid deve ser string decimal exata"
+    },
+    {
+      "name": "F3 recusa: vil layout com 15 camadas",
+      "ok": true,
+      "detail": "erros=1 references.sofle.vil.layout deve ter 16 camadas"
+    },
+    {
+      "name": "F3 recusa: schema_version inválido",
+      "ok": true,
+      "detail": "erros=1 schema_version incompatível: 99 (esperado 6)"
+    },
+    {
+      "name": "F10 parse v05 original ok",
+      "ok": true,
+      "detail": "schema=5 size=1024028 B"
+    },
+    {
+      "name": "F10 v05 original aceito pela validação (0 erros, sem 'conflicts')",
+      "ok": true,
+      "detail": "0 erros"
+    },
+    {
+      "name": "F10 v5 promovido a schema 6 continua exigente (conflicts obrigatório no 6)",
+      "ok": true,
+      "detail": "campo conflicts deve ser lista (obrigatório no schema 6) | references.corne.native_layers ausente"
+    },
+    {
+      "name": "playwright disponível",
+      "ok": true,
+      "detail": "módulo playwright disponível"
+    },
+    {
+      "name": "título do app consolidado",
+      "ok": true,
+      "detail": "Keyboard Split Manager v19 — Corne Simples v13 & Sofle (Consolidado)"
+    },
+    {
+      "name": "sem 'v05 Homologado' na UI",
+      "ok": true,
+      "detail": "checa innerText"
+    },
+    {
+      "name": "nenhum pageerror no load (ex.: TypeError reading 'L0')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "candidato corne L0 renderizado",
+      "ok": true,
+      "detail": "0|Tab|Tab|&kp TAB"
+    },
+    {
+      "name": "perfil Referência renderiza bindings nativos &kp (F1)",
+      "ok": true,
+      "detail": "0|&kp TAB|&kp TAB"
+    },
+    {
+      "name": "referência é somente leitura (alerta, sem crash)",
+      "ok": true,
+      "detail": "Perfil de referência é somente leitura."
+    },
+    {
+      "name": "sofle 58 com nota de encoders",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sofle tem 10 dedões visíveis",
+      "ok": true,
+      "detail": "count=10"
+    },
+    {
+      "name": "F2 comparador mostra diferenças reais",
+      "ok": true,
+      "detail": "esperado=15 obtido=15"
+    },
+    {
+      "name": "F3 import recusada: incompleto_matrix1key.json",
+      "ok": true,
+      "detail": "IMPORTAÇÃO RECUSADA: estrutura incompatível (2 problema(s)). | • camada L0/corne matrix deve ser 3x12"
+    },
+    {
+      "name": "F3 import recusada: incompleto_sem_profiles.json",
+      "ok": true,
+      "detail": "IMPORTAÇÃO RECUSADA: estrutura incompatível (2 problema(s)). | • camada L0/corne matrix deve ser 3x12"
+    },
+    {
+      "name": "F3 import recusada: incompleto_sem_references.json",
+      "ok": true,
+      "detail": "IMPORTAÇÃO RECUSADA: estrutura incompatível (2 problema(s)). | • camada L0/corne matrix deve ser 3x12"
+    },
+    {
+      "name": "estado preservado após recusas (chip igual)",
+      "ok": true,
+      "detail": "Sem alterações não salvas → Sem alterações não salvas"
+    },
+    {
+      "name": "mutation uid numérico preparada",
+      "ok": true,
+      "detail": "3 ocorrências convertidas para número"
+    },
+    {
+      "name": "F4 import com uid numérico + campo seguinte → exato",
+      "ok": true,
+      "detail": "Arquivo válido importado. | UID Sofle: 12888985424971681029"
+    },
+    {
+      "name": "import válida v6 aceita",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "rascunho v06 gravado em localStorage",
+      "ok": true,
+      "detail": "872997 B"
+    },
+    {
+      "name": "edição refletida no board (sub=EDT-TEST)",
+      "ok": true,
+      "detail": "EDT-TEST"
+    },
+    {
+      "name": "rascunho recuperado após reload",
+      "ok": true,
+      "detail": "EDT-TEST"
+    },
+    {
+      "name": "nenhum pageerror acumulado",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "limpeza restaura estado pristine do dataset embutido",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v05 original acessível para cenários F8–F10",
+      "ok": true,
+      "detail": "1024028 B"
+    },
+    {
+      "name": "F7 arquivo recebeu o SNAPSHOT (edição durante a gravação ficou fora)",
+      "ok": true,
+      "detail": "1912608 B; edição dentro do arquivo=false"
+    },
+    {
+      "name": "F7 chip mantém 'Alterações NÃO salvas' (edição posterior não vira 'confirmado')",
+      "ok": true,
+      "detail": "Alterações NÃO salvas no arquivo · rascunho 31/10/2026, 17:10:14"
+    },
+    {
+      "name": "F7 arquivo não marcado 'confirmado' enquanto há pendência",
+      "ok": true,
+      "detail": "Arquivo em disco: não confirmado"
+    },
+    {
+      "name": "F7 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F8 entrada v05 sobrevive ao recarregar e aparece no histórico",
+      "ok": true,
+      "detail": "29/10/2026, 07:00:00 · rascunho antigo v05 (teste F8) · hash teste | Restaurar | Baixar"
+    },
+    {
+      "name": "F8 restaurar v05 vai ao banner de migração (não aplica direto)",
+      "ok": true,
+      "detail": "Rascunho antigo detectado (versão arquivada v05 (29/10/2026, 07:00:00)). Nada foi alterado no estado atual. | Migrar com referência histórica"
+    },
+    {
+      "name": "F8 alerta informa o caminho seguro para v05",
+      "ok": true,
+      "detail": "Versão v05 não é aplicada diretamente (schema antigo). Ela foi colocada no banner de migração — use “Migrar com referência histórica”, “Arquivar rascunho” ou “Baixar rascunho”. Nada foi alterado no estado atual."
+    },
+    {
+      "name": "F8 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F9 setup: rascunho antigo presente no banner",
+      "ok": true,
+      "detail": "count=1"
+    },
+    {
+      "name": "F9 NENHUMA mensagem de 'arquivado' com armazenamento falhando",
+      "ok": true,
+      "detail": "FALHA ao gravar histórico no navegador (armazenamento cheio). O estado atual continua em memória. || ARQUIVAMENTO NÃO CONFIRMADO: o histórico não pôde ser gravado no navegador (armazenamento). O rascunho antigo PERMANECE no banner de migração — nada foi perdido. Use “Baixar rascunho” como alternativ"
+    },
+    {
+      "name": "F9 alerta honesto 'ARQUIVAMENTO NÃO CONFIRMADO' exibido",
+      "ok": true,
+      "detail": "FALHA ao gravar histórico no navegador (armazenamento cheio). O estado atual continua em memória. || ARQUIVAMENTO NÃO CONFIRMADO: o histórico não pôde ser gravado no navegador (armazenamento). O rascu"
+    },
+    {
+      "name": "F9 rascunho permanece disponível no banner (nada perdido)",
+      "ok": true,
+      "detail": "count=1"
+    },
+    {
+      "name": "F9 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F10 v05 original importado sem recusa (banner de migração)",
+      "ok": true,
+      "detail": "Rascunho v05 válido recebido. Nada foi aplicado ainda: escolha o caminho no banner de migração."
+    },
+    {
+      "name": "F10 NENHUM 'IMPORTAÇÃO RECUSADA' para o schema da própria versão",
+      "ok": true,
+      "detail": "Rascunho v05 válido recebido. Nada foi aplicado ainda: escolha o caminho no banner de migração."
+    },
+    {
+      "name": "F10 banner de migração ativo para o v05",
+      "ok": true,
+      "detail": "count=1"
+    },
+    {
+      "name": "F10 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F11 aponta para o arquivo real app/verify_ksm.py",
+      "ok": true,
+      "detail": "python3 app/verify_ksm.py | # (F11) sem argumentos: caminhos fixos internos (data/keymap_data_v06.json) e registro em reports/VERIFY_KSM_FASE3_C5.json"
+    },
+    {
+      "name": "F11 não aponta mais para generators/verify_ksm.py (inexistente)",
+      "ok": true,
+      "detail": "python3 app/verify_ksm.py | # (F11) sem argumentos: caminhos fixos internos (data/keymap_data_v06.json) e registro em reports/VERIFY_KSM_FASE3_C5.json"
+    },
+    {
+      "name": "F11 sem argumento inventado --dataset (o verificador não o aceita)",
+      "ok": true,
+      "detail": "# (F11) sem argumentos: caminhos fixos internos (data/keymap_data_v06.json) e registro em reports/VERIFY_KSM_FASE3_C5.json"
+    },
+    {
+      "name": "F12 comando Sofle usa compose_sofle_candidato.py oficial",
+      "ok": true,
+      "detail": "python3 generators/compose_sofle_candidato.py --dataset data/keymap_data_v06.json --outdir ksm-work/generators/candidates/sofle_v06"
+    },
+    {
+      "name": "F12 comando Sofle usa argumento --outdir",
+      "ok": true,
+      "detail": "python3 generators/compose_sofle_candidato.py --dataset data/keymap_data_v06.json --outdir ksm-work/generators/candidates/sofle_v06"
+    },
+    {
+      "name": "F12 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F13 saveEdit() no Sofle salva com impl_qmk válido sem exigir & no ZMK",
+      "ok": true,
+      "detail": "dialogClosed=true"
+    },
+    {
+      "name": "F13 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F14 comparador do Sofle reflete alteração somente em impl_qmk no diff",
+      "ok": true,
+      "detail": "A: Mapa antigo L0 · B: Referência Sofle L0 · 25 diferença(s) textual(is) em 58 posições (SOFLE). | ⚠️ ALERTA DE ERGONOMIA NOS POLEGARES (Command / macOS): | Detectada divergência de modificador Command (GUI) nas teclas de polegar entre os perfis: | "
+    },
+    {
+      "name": "F14 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F15 auditoria possui seção CORNE (ZMK)",
+      "ok": true,
+      "detail": "PERFIL: Corne Simples v13 (independente) |   • Camadas: L0, L1, L2, L3, L4, L5, L6 |   • Posições: 294 / 294"
+    },
+    {
+      "name": "F15 auditoria possui seção SOFLE (Vial/QMK)",
+      "ok": true,
+      "detail": "  • Camadas alcançáveis estaticamente: 7 / 7 |   • Camadas órfãs: nenhuma |   • Pendências de layout do computador: nenhuma posição marcada"
+    },
+    {
+      "name": "F15 auditoria identifica placeholders claramente",
+      "ok": true,
+      "detail": "  • Modificadores da Base real: A=Ctrl S=Alt D=Cmd F=Shift; J=Shift K=Cmd L=Alt ;=Ctrl. |   • NAV: Espaço ativa; A=Ctrl S=Alt D=Cmd F=Shift; setas J/K/L/; = esquerda/baixo/cima/direita; Home/PgDn/PgUp/End em U/I/O/P. |   • O Corne antigo, suas referências e o Sofle estão em estruturas separadas. |   • Acentuação no Mac: Internacional informado; Opt+E e Opt+U atribuídos, resultado físico pendente."
+    },
+    {
+      "name": "F16 auditoria de acessibilidade de camadas presente",
+      "ok": true,
+      "detail": "  • Estado: revisão 13, dedões agrupados e NAV com setas na direita. UF2 v01 não atualizado; editar o HTML não atualiza o teclado. Nova organização pendente de teste físico. |  | CORNE (ZMK): 420 / 420 posições (OK) |   • Células vazias: 0"
+    },
+    {
+      "name": "F15 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F17 zoom inicial 100%",
+      "ok": true,
+      "detail": "inicial=100%"
+    },
+    {
+      "name": "F17 botão Zoom + amplia escala",
+      "ok": true,
+      "detail": "txt=115% prop=1.15"
+    },
+    {
+      "name": "F17 botão 100% reseta escala",
+      "ok": true,
+      "detail": "reset=100%"
+    },
+    {
+      "name": "F17 botão Zoom - reduz escala",
+      "ok": true,
+      "detail": "out=85%"
+    },
+    {
+      "name": "F17 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F18 copiar tecla registra na barra e ativa feedback",
+      "ok": true,
+      "detail": "copyFb=✓ Copiada! clip=Esc (pos 0)"
+    },
+    {
+      "name": "F18 colar tecla transfere rótulo copiado para formulário",
+      "ok": true,
+      "detail": "antes=1 colado=Esc"
+    },
+    {
+      "name": "F18 troca (Swap) na camada atual inverte posições 0 e 1",
+      "ok": true,
+      "detail": "pos0=1 pos1=Esc"
+    },
+    {
+      "name": "F18 troca (Swap) em TODAS as camadas inverte em L0 e L1",
+      "ok": true,
+      "detail": "L0: Option/Cmd->Cmd/Option | L1: Shift/Delete->Delete/Shift"
+    },
+    {
+      "name": "F18 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F19 Corne Simples exibe exatamente 7 camadas",
+      "ok": true,
+      "detail": "L0 BASE | L1 SYMBOLS | L2 NUM | L3 MOUSE | L4 NAV | L5 SYSTEM | L6 FUN"
+    },
+    {
+      "name": "F19 auditoria em Corne Simples reconhece perfil independente",
+      "ok": true,
+      "detail": "PERFIL: Corne Simples v13 (independente)"
+    },
+    {
+      "name": "F19 zoom funcional no Corne Simples",
+      "ok": true,
+      "detail": "zoom=115%"
+    },
+    {
+      "name": "F19 Mapa antigo exibe 10 camadas (L0 a L9)",
+      "ok": true,
+      "detail": "camadas=10"
+    },
+    {
+      "name": "F19 botão Corne Simples ocultado ao selecionar Sofle",
+      "ok": true,
+      "detail": "hidden=true"
+    },
+    {
+      "name": "F19 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F20 Corne Simples v13 identificado no cabeçalho ou perfil",
+      "ok": true,
+      "detail": "v13 text check"
+    },
+    {
+      "name": "F20 aviso noscript para JavaScript bloqueado presente",
+      "ok": true,
+      "detail": "noscript presente com orientações Safari/iPhone"
+    },
+    {
+      "name": "F20 CSS contém media query adaptativa para iPhone/mobile (max-width: 768px)",
+      "ok": true,
+      "detail": "max-width: 768px"
+    },
+    {
+      "name": "F20 troca de tecla elimina binding órfão no destino",
+      "ok": true,
+      "detail": "{\"ok\":true,\"k1Binding\":\"&custom_binding_test\"}"
+    },
+    {
+      "name": "F20 swap executado na UI altera posições 0 e 1",
+      "ok": true,
+      "detail": "esperado 0=Q 1=Tab, obtido 0=Q 1=Tab"
+    },
+    {
+      "name": "F20 histórico registra snapshot 'antes de troca' pré-mutação",
+      "ok": true,
+      "detail": "31/10/2026, 17:10:23 · antes de troca pos 0 ⇄ 1 (L0) · hash cab6ba746107\nRestaurar\nBaixar"
+    },
+    {
+      "name": "F20 restaurar histórico desfaz a troca e retorna ao estado pré-mutação",
+      "ok": true,
+      "detail": "antes=Tab/Q restaurado=Tab/Q"
+    },
+    {
+      "name": "F20 nenhum pageerror",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F21 aviso de falha na inicialização renderiza botão de resgate no DOM",
+      "ok": true,
+      "detail": "botão #btnRescueUserDraft visível"
+    },
+    {
+      "name": "F21 clique real no botão baixa ksm_rascunho_bruto.json com conteúdo íntegro",
+      "ok": true,
+      "detail": "arquivo=ksm_rascunho_bruto.json tamanho=48 B"
+    },
+    {
+      "name": "F21 nenhum pageerror não-tratado na falha de inicialização",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

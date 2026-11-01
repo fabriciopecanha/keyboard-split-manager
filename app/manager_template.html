@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard Split Manager v19 — Corne Simples v13 &amp; Sofle (Consolidado)</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#111a2b; --panel2:#0f1728; --line:#273449;
+    --text:#e8eefc; --muted:#9fb0cc; --accent:#5b8cff; --ok:#22c55e;
+    --warn:#f59e0b; --bad:#ef4444; --ref:#22d3ee;
+    --key:#1a2740; --key-hold:#2b1b4d; --key-active:#3a2a08; --key-warn:#3b1111;
+    --board-zoom:1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  header{position:sticky;top:0;z-index:30;background:#0a1120ee;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+  .hrow{max-width:1400px;margin:0 auto;padding:10px 16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .brand{font-weight:800;font-size:16px;letter-spacing:.2px}
+  .brand small{display:block;font-weight:500;color:var(--muted);font-size:11px}
+  .chip{font-size:11px;padding:3px 8px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--muted);white-space:nowrap}
+  .chip.ok{color:#86efac;border-color:#166534;background:#052e16}
+  .chip.warn{color:#fcd34d;border-color:#92400e;background:#2a1a05}
+  .chip.bad{color:#fca5a5;border-color:#7f1d1d;background:#2a0a0a}
+  .chip.ref{color:#a5f3fc;border-color:#155e75;background:#062a33}
+  .spacer{flex:1}
+  button,.btn{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:12px;font-weight:600;cursor:pointer}
+  button:hover{border-color:#3b82f6}
+  button.primary{background:#1d4ed8;border-color:#2563eb;color:white}
+  button.ok{background:#166534;border-color:#22c55e;color:#dcfce7}
+  button.warn{background:#78350f;border-color:#f59e0b;color:#fef3c7}
+  button.danger{background:#7f1d1d;border-color:#ef4444;color:#fee2e2}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  main{max-width:1400px;margin:0 auto;padding:16px}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+  .group{display:flex;gap:6px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:4px}
+  .group button{background:transparent;border:0;padding:6px 9px}
+  .group button.sel{background:#1e3a8a;color:white}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+  .panel h2{margin:0 0 8px;font-size:15px}
+  .meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}
+  #boardWrap{width:100%;overflow-x:auto;padding:6px 0;text-align:center}
+  .board{display:inline-flex;flex-direction:column;gap:6px;align-items:center;padding:6px 0;zoom:var(--board-zoom);transform-origin:top center}
+  .row{display:flex;gap:5px;align-items:center}
+  .gap{width:26px}
+  .key{width:56px;height:52px;border:1px solid #334155;border-radius:8px;background:var(--key);padding:5px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;position:relative;user-select:none}
+  .key:hover{outline:2px solid var(--accent);outline-offset:1px}
+  .key .top{font-size:9px;color:var(--muted);line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .key .lbl{font-weight:800;font-size:11px;line-height:1.05;text-align:center;overflow:hidden;text-overflow:ellipsis;max-height:24px}
+  .key .sub{font-size:8px;color:#c4b5fd;text-align:center;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .key .code{font:8px/1 ui-monospace,Menlo,monospace;color:#93c5fd;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .key.hold{background:var(--key-hold);border-color:#7c3aed}
+  .key.active{background:var(--key-active);border-color:#f59e0b}
+  .key.warn{background:var(--key-warn);border-color:#ef4444}
+  .key.disabled{opacity:.45}
+  .key.conflict{outline:2px solid #f59e0b;outline-offset:1px}
+  .key.diff{outline:2px dashed #38bdf8;outline-offset:1px}
+  .key .pin{position:absolute;top:2px;right:3px;font-size:8px;color:#94a3b8}
+  .thumbs{display:flex;gap:5px;justify-content:center;align-items:center;padding-top:3px}
+  .encoders{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:6px 0}
+  .enc{border:1px dashed #0e7490;background:#062a33;border-radius:8px;padding:5px 8px;font-size:10px;color:#a5f3fc}
+  .tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px}
+  .tab{padding:6px 9px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--muted);cursor:pointer;font-size:11px;font-weight:700}
+  .tab.sel{background:#1e3a8a;color:white;border-color:#3b82f6}
+  .layer-info{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-bottom:6px}
+  .layer-info b{color:var(--text)}
+  dialog{border:1px solid var(--line);border-radius:14px;background:#0d1526;color:var(--text);max-width:980px;width:calc(100vw - 30px);padding:0}
+  dialog::backdrop{background:#0008}
+  .dlg-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#0d1526;z-index:2}
+  .dlg-head h3{margin:0;font-size:15px}
+  .dlg-body{padding:14px;max-height:72vh;overflow:auto}
+  .dlg-foot{display:flex;gap:8px;justify-content:flex-end;padding:12px 14px;border-top:1px solid var(--line);position:sticky;bottom:0;background:#0d1526}
+  .field{display:flex;flex-direction:column;gap:4px;margin-bottom:9px}
+  .field label{font-size:11px;color:var(--muted);font-weight:700}
+  input[type=text],select,textarea{background:#0a1222;border:1px solid var(--line);border-radius:8px;padding:8px;color:var(--text);font:13px ui-monospace,Menlo,monospace;width:100%}
+  textarea{min-height:90px;resize:vertical}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .notice{padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);font-size:12px;margin-bottom:10px;color:var(--muted)}
+  .notice.warn{border-color:#92400e;background:#2a1a05;color:#fcd34d}
+  .notice.bad{border-color:#7f1d1d;background:#2a0a0a;color:#fca5a5}
+  .notice.ok{border-color:#166534;background:#052e16;color:#86efac}
+  .list{display:flex;flex-direction:column;gap:8px}
+  .item{border:1px solid var(--line);border-radius:10px;padding:9px;background:var(--panel2)}
+  .item .h{display:flex;gap:8px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  .mono{font-family:ui-monospace,Menlo,monospace}
+  .small{font-size:11px;color:var(--muted)}
+  table{border-collapse:collapse;width:100%;font-size:11px}
+  th,td{border-bottom:1px solid var(--line);padding:5px;text-align:left;vertical-align:top;word-break:break-word}
+  th{color:#93c5fd}
+  code{font-family:ui-monospace,Menlo,monospace;background:#0a1222;padding:1px 4px;border-radius:4px;border:1px solid var(--line)}
+  .kbd-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:10px;color:var(--muted);margin-top:8px}
+  .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:middle;border:1px solid #475569}
+  /* Adaptação específica para telas pequenas (iPhone / Safari Mobile) */
+  @media (max-width: 768px){
+    .hrow{padding:8px 10px;gap:8px}
+    .brand{font-size:14px}
+    .brand small{font-size:10px}
+    .toolbar{gap:6px}
+    .toolbar button,.group button{min-height:38px;padding:8px 10px;font-size:12px;touch-action:manipulation}
+    .grid2{grid-template-columns:1fr;gap:8px}
+    dialog{width:95vw;max-width:95vw;margin:auto;border-radius:12px}
+    .dlg-body{padding:10px;max-height:65vh;-webkit-overflow-scrolling:touch}
+    .dlg-foot{padding:10px}
+    .key{touch-action:manipulation}
+    #boardWrap{-webkit-overflow-scrolling:touch;scroll-behavior:smooth;padding:10px 0}
+    .meta{font-size:10px;gap:8px}
+    .item .h{flex-direction:column;align-items:flex-start;gap:6px}
+  }
+  @media print{header,.toolbar,.no-print{display:none!important}body{background:white;color:black}.panel{border-color:#ccc}}
+</style>
+</head>
+<body>
+<noscript>
+  <div style="background:#450a0a;border:2px solid #ef4444;color:#fee2e2;padding:16px;margin:12px;border-radius:10px;text-align:center;font-size:13px;line-height:1.5;">
+    <strong>⚠️ JavaScript Desativado ou Bloqueado:</strong><br>
+    O <em>Keyboard Split Manager</em> necessita de JavaScript ativo para renderizar a matriz de teclas, alternar camadas, gerenciar o histórico e gerar os mapas do teclado.<br>
+    No iPhone / Safari, acesse <strong>Ajustes &gt; Safari &gt; Avançado &gt; JavaScript</strong> e certifique-se de que esteja ativado.
+  </div>
+</noscript>
+<header>
+  <div class="hrow">
+    <div class="brand">Keyboard Split Manager <small>v19 Consolidado · Corne Simples v13 + Mapa antigo + Sofle</small></div>
+    <span id="chipDirty" class="chip ok">Sem alterações locais</span>
+    <span id="chipSource" class="chip">Fonte: carregando…</span>
+    <span id="chipHash" class="chip">Hash: …</span>
+    <span id="chipConflicts" class="chip ok">Conflitos: 0</span>
+    <span id="chipFile" class="chip">Arquivo em disco: não confirmado</span>
+    <div class="spacer"></div>
+    <button id="btnHelp">Ajuda</button>
+  </div>
+</header>
+<main>
+  <div class="toolbar no-print">
+    <div class="group" id="kbGroup">
+      <button data-kb="corne" class="sel">Corne 42</button>
+      <button data-kb="sofle">Sofle 58</button>
+    </div>
+    <div class="group" id="profileGroup">
+      <button data-profile="simple" class="sel">Corne Simples · 7 camadas</button>
+      <button data-profile="candidate">Mapa antigo (editável)</button>
+      <button data-profile="reference">Referência (somente leitura)</button>
+    </div>
+    <button id="btnSaveDraft" class="ok">Salvar rascunho</button>
+    <button id="btnDownload">Baixar JSON</button>
+    <button id="btnWriteFile" class="primary">Gravar no arquivo…</button>
+    <button id="btnImport">Importar JSON…</button>
+    <button id="btnCompare">Comparar…</button>
+    <button id="btnHistory">Versões…</button>
+    <button id="btnGenerate" class="warn">Gerar candidatos…</button>
+    <button id="btnAudit">Auditar</button>
+    <button id="btnFunctions">Funções</button>
+    <input id="fileImport" type="file" accept=".json,application/json" hidden>
+  </div>
+
+  <div id="banner"></div>
+
+  <section class="panel">
+    <div class="meta">
+      <span>Dataset: <b id="metaDataset">—</b></span>
+      <span>Versão: <b id="metaVersion">—</b></span>
+      <span>UID Sofle: <b id="metaUid" class="mono">—</b></span>
+      <span>Arquivo usado pelos geradores: <b id="metaGenFile" class="mono">—</b></span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:8px;">
+      <div class="tabs" id="layerTabs" style="margin-bottom:0"></div>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <button id="btnOpenMoveKey" type="button" class="btn" title="Mover, trocar ou replicar teclas nesta camada ou em todas">⇄ Mover / Trocar Teclas…</button>
+        <div id="clipboardPill" style="display:none;align-items:center;gap:5px;background:var(--panel2);border:1px solid #3b82f6;border-radius:8px;padding:3px 8px;font-size:11px;">
+          <span style="color:#93c5fd;">📋 Copiada:</span>
+          <b id="clipKeyLabel" style="color:var(--text);max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></b>
+          <button id="btnClearClip" type="button" style="background:transparent;border:0;padding:0 3px;cursor:pointer;color:var(--muted);font-weight:bold;" title="Limpar tecla copiada">✕</button>
+        </div>
+        <div class="zoom-controls" style="display:flex;align-items:center;gap:4px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:3px 7px;">
+          <span style="font-size:11px;color:var(--muted);font-weight:700;margin-right:2px;">🔍 Zoom:</span>
+          <button id="btnZoomOut" type="button" class="btn" style="padding:2px 7px;font-size:12px;font-weight:bold;" title="Diminuir tamanho do teclado">−</button>
+          <span id="zoomLevelText" style="font-size:11px;font-weight:700;min-width:38px;text-align:center;font-family:ui-monospace,Menlo,monospace;">100%</span>
+          <button id="btnZoomIn" type="button" class="btn" style="padding:2px 7px;font-size:12px;font-weight:bold;" title="Aumentar tamanho do teclado">+</button>
+          <button id="btnZoomReset" type="button" class="btn" style="padding:2px 6px;font-size:10px;" title="Resetar zoom para 100%">100%</button>
+        </div>
+      </div>
+    </div>
+    <div class="layer-info" id="layerInfo"></div>
+    <div id="boardWrap"></div>
+    <div class="kbd-legend">
+      <span><span class="sw" style="background:#1a2740"></span>Normal</span>
+      <span><span class="sw" style="background:#2b1b4d;border-color:#7c3aed"></span>Hold/camada</span>
+      <span><span class="sw" style="background:#3a2a08;border-color:#f59e0b"></span>Ativa/saída</span>
+      <span><span class="sw" style="background:#3b1111;border-color:#ef4444"></span>Aviso</span>
+      <span><span class="sw" style="background:#0b1220;border-color:#ef4444"></span>Conflito</span>
+      <span>Clique numa tecla do candidato para editar, copiar ou mover.</span>
+    </div>
+  </section>
+</main>
+
+<dialog id="dlgEdit">
+  <form method="dialog" class="dlg-head"><h3 id="editTitle">Editar tecla</h3><button type="submit">✕</button></form>
+  <div class="dlg-body">
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center;padding:8px 10px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;">
+      <span style="font-size:11px;color:var(--muted);font-weight:700;">Ações de Tecla:</span>
+      <button id="btnCopyKey" type="button" class="btn" title="Copiar todos os dados desta tecla">📋 Copiar tecla</button>
+      <button id="btnPasteKey" type="button" class="btn" title="Colar dados da tecla copiada" disabled>📥 Colar copiado</button>
+      <button id="btnSwapKey" type="button" class="btn" title="Mover ou trocar esta tecla com outra posição ou em todas as camadas">⇄ Mover / Trocar com outra…</button>
+      <span id="copyKeyFeedback" class="small" style="color:var(--ok);margin-left:auto;font-weight:700;"></span>
+    </div>
+    <div class="grid2">
+      <div class="field"><label>Rótulo principal</label><input id="editLabel" type="text" maxlength="40"></div>
+      <div class="field"><label>Sub-rótulo</label><input id="editSub" type="text" maxlength="60"></div>
+    </div>
+    <div class="field"><label>Descrição do comportamento</label><input id="editBehavior" type="text" maxlength="160"></div>
+    <div class="grid2">
+      <div class="field"><label>ZMK Devicetree (deve começar com &amp;)</label><input id="editZmk" type="text" maxlength="200"></div>
+      <div class="field"><label>QMK / Vial</label><input id="editQmk" type="text" maxlength="200"></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label>Tipo visual</label><select id="editType"><option value="normal">normal</option><option value="hold">hold</option><option value="active">active</option><option value="warn">warn</option><option value="disabled">disabled</option></select></div>
+      <div class="field"><label>Status</label><select id="editStatus"><option value="candidato">candidato</option><option value="proposta">proposta</option><option value="implementado">implementado</option><option value="testado">testado</option><option value="conflito">conflito</option></select></div>
+    </div>
+    <div id="editMsg" class="small"></div>
+  </div>
+  <div class="dlg-foot"><button id="editCancel">Cancelar</button><button id="editSave" class="primary">Salvar alteração</button></div>
+</dialog>
+
+<dialog id="dlgMoveKey">
+  <form method="dialog" class="dlg-head"><h3 id="moveKeyTitle">Mover / Trocar Teclas</h3><button type="submit">✕</button></form>
+  <div class="dlg-body">
+    <div class="notice ok">
+      Transfira, troque de lugar ou replique teclas com <b>todos os seus atributos e funções</b> (rótulo, sub-rótulo, comportamento, ZMK, QMK, tipo e status).
+    </div>
+    <div class="grid2">
+      <div class="field">
+        <label>1. Tecla de Origem (A)</label>
+        <select id="moveKeySrc"></select>
+        <div id="moveKeySrcInfo" class="small mono" style="margin-top:4px;color:var(--muted)"></div>
+      </div>
+      <div class="field">
+        <label>2. Tecla de Destino (B)</label>
+        <select id="moveKeyDest"></select>
+        <div id="moveKeyDestInfo" class="small mono" style="margin-top:4px;color:var(--muted)"></div>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:10px;">
+      <div class="field">
+        <label>3. Modo de Operação</label>
+        <select id="moveKeyMode">
+          <option value="swap">Trocar de posição (A ⇄ B)</option>
+          <option value="replace">Substituir / Copiar (B recebe todos os atributos de A)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>4. Escopo das Camadas</label>
+        <select id="moveKeyScope">
+          <option value="current">Somente na camada atual</option>
+          <option value="all">Em TODAS as camadas do teclado (L0 a L9)</option>
+        </select>
+      </div>
+    </div>
+    <div id="moveKeySummary" class="notice warn" style="margin-top:12px;font-size:12px;"></div>
+  </div>
+  <div class="dlg-foot">
+    <button id="moveKeyCancel" type="button">Cancelar</button>
+    <button id="moveKeyExec" type="button" class="primary">Confirmar e Executar</button>
+  </div>
+</dialog>
+
+<dialog id="dlgCompare">
+  <form method="dialog" class="dlg-head"><h3>Comparar versões / camadas</h3><button type="submit">✕</button></form>
+  <div class="dlg-body">
+    <div class="grid2">
+      <div class="field"><label>Lado A</label><select id="cmpA"></select></div>
+      <div class="field"><label>Lado B</label><select id="cmpB"></select></div>
+    </div>
+    <div class="notice">A comparação é posição a posição e não pressupõe que camadas da referência tenham os mesmos nomes do candidato.</div>
+    <div id="cmpOut"></div>
+  </div>
+  <div class="dlg-foot"><button id="cmpRun" class="primary">Comparar</button></div>
+</dialog>
+
+<dialog id="dlgHistory">
+  <form method="dialog" class="dlg-head"><h3>Versões e arquivos recuperáveis</h3><button type="submit">✕</button></form>
+  <div class="dlg-body"><div id="histOut" class="list"></div></div>
+  <div class="dlg-foot"><button id="histClose">Fechar</button></div>
+</dialog>
+
+<dialog id="dlgConflicts">
+  <form method="dialog" class="dlg-head"><h3>Resolver conflitos de migração</h3><button type="submit">✕</button></form>
+  <div class="dlg-body"><div id="confOut" class="list"></div></div>
+  <div class="dlg-foot"><button id="confClose">Fechar</button></div>
+</dialog>
+
+<dialog id="dlgGenerate">
+  <form method="dialog" class="dlg-head"><h3>Gerar candidatos versionados</h3><button type="submit">✕</button></form>
+  <div class="dlg-body">
+    <div id="genBlock" class="notice"></div>
+    <p class="small">O navegador não executa Python. Estes comandos usam o dataset salvo em disco; confirme o hash exibido no cabeçalho antes de gerar.</p>
+    <div class="field"><label>1) Gerar Corne (.keymap)</label><textarea readonly id="genCorne"></textarea></div>
+    <div class="field"><label>2) Gerar Sofle (.vil)</label><textarea readonly id="genSofle"></textarea></div>
+    <div class="field"><label>3) Validar tudo</label><textarea readonly id="genVerify"></textarea></div>
+    <div class="notice warn">Gerar arquivo não é gravar firmware. Nenhum UF2 é produzido aqui e nenhum teclado é alterado.</div>
+  </div>
+  <div class="dlg-foot"><button id="genClose">Fechar</button></div>
+</dialog>
+
+<dialog id="dlgAudit">
+  <form method="dialog" class="dlg-head"><h3>Auditoria do dataset</h3><button type="submit">✕</button></form>
+  <div class="dlg-body"><pre id="auditOut" class="mono small" style="white-space:pre-wrap"></pre></div>
+  <div class="dlg-foot"><button id="auditClose">Fechar</button></div>
+</dialog>
+
+<dialog id="dlgFunctions">
+  <form method="dialog" class="dlg-head"><h3>Funções propostas / implementadas / testadas</h3><button type="submit">✕</button></form>
+  <div class="dlg-body"><div id="fnOut"></div></div>
+  <div class="dlg-foot"><button id="fnClose">Fechar</button></div>
+</dialog>
+
+<dialog id="dlgHelp">
+  <form method="dialog" class="dlg-head"><h3>Guia rápido</h3><button type="submit">✕</button></form>
+  <div class="dlg-body">
+    <div class="notice ok"><b>Versão Consolidada v18:</b> Integra os perfis do Corne Simples, Mapa antigo e Sofle com controles de Zoom, Copiar/Colar e Mover/Trocar Teclas.</div>
+    <ol class="small">
+      <li>Escolha <b>Corne 42</b> ou <b>Sofle 58</b>.</li>
+      <li>No Corne, escolha <b>Corne Simples</b> (7 camadas novas) ou <b>Mapa antigo</b> (L0 a L9). <b>Referência</b> é somente leitura para conferir o firmware base.</li>
+      <li>Use os botões de <b>🔍 Zoom</b> no topo para aproximar ou afastar o teclado (60% a 250%), memorizado automaticamente no navegador.</li>
+      <li>Clique numa tecla para editar. Use <b>📋 Copiar tecla</b> e <b>📥 Colar copiado</b> para transferir atributos entre teclas.</li>
+      <li>Use <b>⇄ Mover / Trocar Teclas…</b> para trocar (Swap) ou substituir (Replace) teclas na <b>camada atual</b> ou em <b>TODAS as camadas</b> simultaneamente.</li>
+      <li><b>Salvar rascunho</b> grava no navegador. <b>Baixar JSON</b> exporta o arquivo. <b>Gravar no arquivo</b> grava via Chrome.</li>
+      <li>Use <b>Comparar</b> para confrontar versões e camadas; <b>Versões</b> gerencia o histórico de alterações.</li>
+      <li>Para gerar os arquivos (.vil / .keymap), copie e execute os comandos em <b>Gerar candidatos</b>.</li>
+    </ol>
+    <div class="notice warn">Teste físico no teclado não foi executado. Nada aqui grava firmware nem aplica layout no Vial/ZMK Studio.</div>
+  </div>
+  <div class="dlg-foot"><button id="helpClose">Fechar</button></div>
+</dialog>
+
+<script id="ksm-data" type="application/json">__KSM_DATA__</script>
+<script>__KSM_CORE_JS__</script>
+<script>__KSM_APP_JS__</script>
+</body>
+</html>

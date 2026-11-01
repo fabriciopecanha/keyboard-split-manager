@@ -1,0 +1,228 @@
+/*
+ * CORNE 42 (ZMK) — PERFIL: Corne Simples v13 (revisão 13)
+ * Hash canônico do dataset: cab6ba746107d9ee15f98cfd10614c09f5ecede9815913ced756316a2e405bd3
+ * Versão: v06_consolidada | Arquivo: keymap_data_v06.json
+ * Camadas: L0 a L6 (7 camadas / 294 posições) | Gerador: ksm-work/generators/generate_corne_candidato.py --profile simple
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+
+/* Keep the standard LT timing. Only its hold delegate is lock-aware. */
+&lt { bindings = <&fp_mo>, <&kp>; };
+
+/ {
+    behaviors {
+        fp_mo: fp_layer_hold { compatible = "fp,behavior-layer-hold"; #binding-cells = <1>; display-name = "FP Layer Hold"; };
+        fp_lock: fp_layer_lock { compatible = "fp,behavior-layer-lock"; #binding-cells = <1>; display-name = "FP Layer Lock"; };
+        /* HRM Left (GACS) */
+        hrm_l: home_row_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-on-release;
+            bindings = <&kp &kp>;
+            display-name = "HRM Left (GACS)";
+        };
+
+        /* HRM Right (GACS) */
+        hrm_r: home_row_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-on-release;
+            bindings = <&kp &kp>;
+            display-name = "HRM Right (GACS)";
+        };
+
+        /* Undo FUN (Dedão 41) */
+        ht_undo_fun: thumb_undo_fun {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&fp_mo &kp>;
+            display-name = "Undo FUN (Dedão 41)";
+        };
+
+        /* Símbolo no toque / modificador ao segurar */
+        hrm_sym_l: home_row_mods_symbols_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp &kp>;
+            display-name = "Símbolo no toque / modificador ao segurar";
+        };
+
+        /* Símbolo no toque / modificador direito ao segurar */
+        hrm_sym_r: home_row_mods_symbols_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp &kp>;
+            display-name = "Símbolo no toque / modificador direito ao segurar";
+        };
+
+        /* Refazer SYSTEM (Dedão 36) */
+        ht_redo_system: thumb_redo_system {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&fp_mo &kp>;
+            display-name = "Refazer SYSTEM (Dedão 36)";
+        };
+
+        td_lock_mouse: tap_dance_lock_mouse {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            display-name = "Lock MOUSE (2 taps)";
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&fp_lock 3>;
+        };
+        td_lock_nav: tap_dance_lock_nav {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            display-name = "Lock NAV (2 taps)";
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&fp_lock 4>;
+        };
+    };
+
+    macros {
+        math_power: math_power {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "**";
+            bindings = <&macro_tap &kp ASTRK &kp ASTRK>;
+        };
+        math_square: math_square {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "**2";
+            bindings = <&macro_tap &kp ASTRK &kp ASTRK &kp N2>;
+        };
+        math_sqrt: math_sqrt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "sqrt()";
+            bindings = <&macro_tap &kp S &kp Q &kp R &kp T &kp LPAR &kp RPAR &kp LEFT>;
+        };
+        math_exp: math_exp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            display-name = "exp()";
+            bindings = <&macro_tap &kp E &kp X &kp P &kp LPAR &kp RPAR &kp LEFT>;
+        };
+    };
+
+    /* KEYMAP CANÔNICO CORNE SIMPLES: 42 teclas × 7 camadas (294 posições) */
+    keymap {
+        compatible = "zmk,keymap";
+
+        /* L0: BASE */
+        base_layer {
+            display-name = "BASE";
+            bindings = <
+                &kp TAB          &kp Q            &kp W            &kp E            &kp R            &kp T    &kp Y            &kp U            &kp I            &kp O            &kp P            &kp BSPC
+                &kp CAPS         &hrm_l LCTRL A   &hrm_l LALT S    &hrm_l LGUI D    &hrm_l LSHFT F   &kp G    &kp H            &hrm_r RSHFT J   &hrm_r RGUI K    &hrm_r RALT L    &hrm_r RCTRL SEMI &kp SQT
+                &kp LS(RET)      &kp Z            &kp X            &kp C            &kp V            &kp B    &kp N            &kp M            &kp COMMA        &kp DOT          &kp FSLH         &kp ESC
+                          &ht_redo_system 5 LG(LS(Z)) &lt 4 SPACE      &lt 3 DEL    &lt 1 RET        &lt 2 BSPC       &ht_undo_fun 6 LG(Z)
+            >;
+        };
+
+        /* L1: SYMBOLS */
+        symbols_layer {
+            display-name = "SYMBOLS";
+            bindings = <
+                &kp GRAVE        &kp LBRC         &kp LBKT         &kp RBKT         &kp RBRC         &kp TILDE    &kp LPAR         &kp RPAR         &kp SQT          &kp DQT          &kp SEMI         &kp BSPC
+                &kp LA(E)        &hrm_sym_l LCTRL COLON &hrm_sym_l LALT BSLH &hrm_sym_l LGUI LT &hrm_sym_l LSHFT GT &kp ASTRK    &kp PLUS         &hrm_sym_r RSHFT MINUS &hrm_sym_r RGUI UNDER &hrm_sym_r RALT FSLH &hrm_sym_r RCTRL QMARK &kp CARET
+                &kp LA(U)        &kp EXCL         &kp AT           &kp HASH         &kp PIPE         &kp EQUAL    &kp AMPS         &kp PRCNT        &kp DLLR         &kp DOT          &kp COMMA        &kp ESC
+                          &trans           &trans           &trans    &trans           &trans           &trans
+            >;
+        };
+
+        /* L2: NUM */
+        num_layer {
+            display-name = "NUM";
+            bindings = <
+                &kp CARET        &kp N7           &kp N8           &kp N9           &kp FSLH         &kp PRCNT    &none            &kp LPAR         &kp RPAR         &kp LBKT         &kp RBKT         &math_sqrt
+                &math_power      &kp N4           &kp N5           &kp N6           &kp ASTRK        &kp MINUS    &none            &kp RSHFT        &kp RGUI         &kp RALT         &kp RCTRL        &math_square
+                &kp N0           &kp N1           &kp N2           &kp N3           &kp PLUS         &kp EQUAL    &none            &kp DOT          &kp COMMA        &kp LBRC         &kp RBRC         &math_exp
+                          &trans           &trans           &trans    &trans           &trans           &trans
+            >;
+        };
+
+        /* L3: MOUSE */
+        mouse_layer {
+            display-name = "MOUSE";
+            bindings = <
+                &none            &none            &none            &none            &none            &none    &none            &kp LG(V)        &kp LG(C)        &kp LG(X)        &kp LG(Z)        &none
+                &none            &kp LCTRL        &kp LALT         &kp LGUI         &kp LSHFT        &none    &none            &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP     &mmv MOVE_RIGHT  &none
+                &td_lock_mouse   &none            &none            &none            &none            &none    &none            &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP     &msc SCRL_RIGHT  &kp ESC
+                          &trans           &trans           &trans    &mkp RCLK        &mkp LCLK        &mkp MCLK
+            >;
+        };
+
+        /* L4: NAV */
+        nav_layer {
+            display-name = "NAV";
+            bindings = <
+                &none            &kp LG(Z)        &kp LG(X)        &kp LG(C)        &kp LG(V)        &none    &none            &kp HOME         &kp PG_DN        &kp PG_UP        &kp END          &none
+                &none            &kp LCTRL        &kp LALT         &kp LGUI         &kp LSHFT        &none    &none            &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &none
+                &td_lock_nav     &none            &none            &none            &none            &none    &none            &none            &none            &none            &none            &kp ESC
+                          &trans           &trans           &trans    &trans           &trans           &trans
+            >;
+        };
+
+        /* L5: SYSTEM */
+        system_layer {
+            display-name = "SYSTEM";
+            bindings = <
+                &none            &none            &none            &none            &none            &none    &none            &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &none            &none
+                &none            &kp LCTRL        &kp LALT         &kp LGUI         &kp LSHFT        &none    &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &none
+                &none            &none            &none            &none            &none            &none    &none            &kp C_PREV       &kp C_PLAY_PAUSE &kp C_NEXT       &none            &none
+                          &trans           &trans           &trans    &trans           &trans           &trans
+            >;
+        };
+
+        /* L6: FUN */
+        fun_layer {
+            display-name = "FUN";
+            bindings = <
+                &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &kp F6    &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
+                &none            &kp LCTRL        &kp LALT         &kp LGUI         &kp LSHFT        &none    &none            &kp RSHFT        &kp RGUI         &kp RALT         &kp RCTRL        &none
+                &none            &none            &none            &none            &none            &none    &none            &none            &none            &none            &none            &none
+                          &trans           &trans           &trans    &trans           &trans           &trans
+            >;
+        };
+
+    };
+};

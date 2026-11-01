@@ -1,0 +1,2 @@
+# Keyboard Split Manager - Dependências Python para testes e geradores
+pytest>=8.0.0

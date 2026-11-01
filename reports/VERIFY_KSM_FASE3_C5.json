@@ -1,0 +1,101 @@
+{
+  "gerado_em": "verify_ksm.py (fase 6 — pós-revisão, execução real nesta corrida)",
+  "itens": [
+    {
+      "item": "dataset v6 (fonte única)",
+      "nivel": "executed",
+      "escopo": "dados",
+      "evidencia": "schema=6; uid Sofle STRING decimal exata '12888985424971681029' (len=20); hash canônico cab6ba746107d9ee…"
+    },
+    {
+      "item": "backup pré-fase2 (Corne + Sofle)",
+      "nivel": "validated",
+      "escopo": "backup de recuperação",
+      "evidencia": "verified=True; Corne 60→60 (missing=0, sha_mismatch=0); sofle 22303→22303 (missing=0, sha_mismatch=0)"
+    },
+    {
+      "item": "extrator corne_reference (4 camadas × 42)",
+      "nivel": "executed",
+      "escopo": "ferramenta de extração",
+      "evidencia": "lido nesta corrida: 4 camadas; cada uma com 42 bindings (default_layer=8, lower_layer=8 conf.; detalhe em corne_reference_extracted.json)"
+    },
+    {
+      "item": "gerador corne candidato (rev)",
+      "nivel": "generated",
+      "escopo": "geração corne (NÃO compila nem grava firmware)",
+      "evidencia": "corne_candidato_v06.keymap (sha256 488f88ab69b4fd34…); cabeçalho com hash canônico ATUAL (cab6ba746107d9ee…) = dataset: True; combo_caps com descrição D1 corrigida ('Shift esquerdo + Esc/L9'): True; v05 obsoleto mantido como evidência (corne_candidato_v05.keymap)"
+    },
+    {
+      "item": "sofle candidato sofle_candidato_v06_A_aprovado.vil",
+      "nivel": "generated",
+      "escopo": "geração sofle (NÃO grava .vil no hardware)",
+      "evidencia": "sha256 3e6200b57f2d04c1…; estado aprovado byte-exata (idêntico a SOFLE_FINAL_HOMOLOGADO_v01.vil)"
+    },
+    {
+      "item": "sofle candidato sofle_candidato_v06_B_design_v03.vil",
+      "nivel": "generated",
+      "escopo": "geração sofle (NÃO grava .vil no hardware)",
+      "evidencia": "sha256 73dc74175fe03003…; design v03 rev: slots 7/8/9 com mapeamento físico calibrado (linhas 0–3 diretas, 5–8 reversas, thumbs dir→int esq / int→dir dir); macros strudel M1..M10 em formato Vial [['tap','KC_*']] integralmente validadas; KC_BRID/KC_BRIU mantidos (brilho do DISPLAY do host — não família RGBLIGHT); testes T10 (correspondência slot-a-slot), T11 (VALID_SET) e T12 (preservação/uid/encoders) verdes"
+    },
+    {
+      "item": "sofle candidato sofle_candidato_v06_C_conectado.vil",
+      "nivel": "generated",
+      "escopo": "geração sofle (NÃO grava .vil no hardware)",
+      "evidencia": "sha256 244834e31e570ba6…; candidato conectado: L7..L9 + seletores nativos Vial testados (MO(8) thumb 2, LT3(KC_DEL) thumb 3, LT2(KC_SPACE) thumb 4, LT4(KC_ENTER) thumb 5, LT5(KC_BSPACE) thumb 6, TD(1) thumb 7 p/ Undo tap / FUN L7 hold, LT9(KC_ESC) Esc/Strudel, dupla ativação NAV+SYM p/ L6 SYSTEM)"
+    },
+    {
+      "item": "app v06 — build determinístico",
+      "nivel": "executed",
+      "escopo": "app v06",
+      "evidencia": "2 builds nesta corrida: rc=0/0; sha256 idênticos (1ef3a56ee58dd912…); 3ª execução no mesmo destino → rc=1 (recusa anti-sobrescrita: ok)"
+    },
+    {
+      "item": "app v06 — node --check nos blocos do HTML ENTREGUE",
+      "nivel": "executed",
+      "escopo": "app v06 (entrega)",
+      "evidencia": "2 blocos <script> extraídos do HTML final e validados agora; OK"
+    },
+    {
+      "item": "app v06 — integridade sanktchuaria do embed",
+      "nivel": "executed",
+      "escopo": "app v06 (entrega)",
+      "evidencia": "hash canônico embed cab6ba746107d9ee… == dataset cab6ba746107d9ee… (igual: True)"
+    },
+    {
+      "item": "suite pytest completa",
+      "nivel": "tested",
+      "escopo": "testes (T-1…T-9)",
+      "evidencia": "executada agora: rc=0; 38 passed in 19.22s"
+    },
+    {
+      "item": "HTML final — testes integrados (uid/validador/import/Chrome real)",
+      "nivel": "executed",
+      "escopo": "app v06 (entrega)",
+      "evidencia": "executado agora nesta corrida: rc=0; total=106 pass=106 fail=0; detalhas em reports/VERIFY_HTML_V06_TESTS.json"
+    },
+    {
+      "item": "caminho antigo keyboard_split_manager_v06_consolidado.html",
+      "nivel": "generated",
+      "escopo": "app (fonte histórica)",
+      "evidencia": "DEPRECATED (não é entrega): 1063495 B; defects comprovados no review: F1 (TypeError reading 'L0'), F2 (isKeyDiff engole diferenças), F3 (imports incompletos aceitos), F4 (uid numérico+campo → SyntaxError), V (UI v05 sem app novo). Mantido apenas para rastreabilidade (keyboard_split_manager_v06_consolidado.html em archive); entrega ATUAL = keyboard_split_manager_v06.html."
+    },
+    {
+      "item": ".vil homologado instalado no Sofle",
+      "nivel": "physical-pending",
+      "escopo": "hardware (status: pausado por decisão)",
+      "evidencia": "SOFLE_FINAL_HOMOLOGADO_v01.vil continua como estado instalado de referência; nada foi gravado nesta corrida (nenhum .vil aplicado, nenhum Restore Stock)"
+    },
+    {
+      "item": "build ZMK do corne",
+      "nivel": "physical-pending",
+      "escopo": "hardware (status bloqueado por toolchain ausente)",
+      "evidencia": "sem west/arm-zephyr-eabi-gcc/SDK nesta máquina; nenhum UF2 produzido ou gravado nesta corrida"
+    },
+    {
+      "item": "originais intocados",
+      "nivel": "executed",
+      "escopo": "garantia estrutural",
+      "evidencia": "worktree Corne: git status --porcelain rc=0 vazio=NÃO: ?? recovery_firmwares/\n?? scratch/\n; HEAD=0915cb6 (esperado 0915cb6); keymap_data.json present=True sha256 985fc9433a9cd22e…; repositório isolado"
+    }
+  ]
+}

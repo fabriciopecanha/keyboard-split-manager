@@ -1,0 +1,3055 @@
+{
+ "source_file": "/Users/fabriciopecanha/corne-oled-clean-worktree/config/corne.keymap",
+ "source_sha256": "0daf3467f430835bc73cb6e6819bff0b08dd9eb8f6c4672df8dac819bb16a34a",
+ "schema": "ksm_reference_extractor_v2",
+ "layer_count": 4,
+ "layers": {
+  "default_layer": {
+   "native_name": "default_layer",
+   "display_name": "default_layer",
+   "binding_count": 42,
+   "bindings": [
+    [
+     "&kp",
+     "TAB"
+    ],
+    [
+     "&kp",
+     "Q"
+    ],
+    [
+     "&kp",
+     "W"
+    ],
+    [
+     "&kp",
+     "E"
+    ],
+    [
+     "&kp",
+     "R"
+    ],
+    [
+     "&kp",
+     "T"
+    ],
+    [
+     "&kp",
+     "Y"
+    ],
+    [
+     "&kp",
+     "U"
+    ],
+    [
+     "&kp",
+     "I"
+    ],
+    [
+     "&kp",
+     "O"
+    ],
+    [
+     "&kp",
+     "P"
+    ],
+    [
+     "&kp",
+     "BSPC"
+    ],
+    [
+     "&kp",
+     "LCTRL"
+    ],
+    [
+     "&kp",
+     "A"
+    ],
+    [
+     "&kp",
+     "S"
+    ],
+    [
+     "&kp",
+     "D"
+    ],
+    [
+     "&kp",
+     "F"
+    ],
+    [
+     "&kp",
+     "G"
+    ],
+    [
+     "&kp",
+     "H"
+    ],
+    [
+     "&kp",
+     "J"
+    ],
+    [
+     "&kp",
+     "K"
+    ],
+    [
+     "&kp",
+     "L"
+    ],
+    [
+     "&kp",
+     "SEMI"
+    ],
+    [
+     "&kp",
+     "SQT"
+    ],
+    [
+     "&kp",
+     "LSHFT"
+    ],
+    [
+     "&kp",
+     "Z"
+    ],
+    [
+     "&kp",
+     "X"
+    ],
+    [
+     "&kp",
+     "C"
+    ],
+    [
+     "&kp",
+     "V"
+    ],
+    [
+     "&kp",
+     "B"
+    ],
+    [
+     "&kp",
+     "N"
+    ],
+    [
+     "&kp",
+     "M"
+    ],
+    [
+     "&kp",
+     "COMMA"
+    ],
+    [
+     "&kp",
+     "DOT"
+    ],
+    [
+     "&kp",
+     "FSLH"
+    ],
+    [
+     "&kp",
+     "ESC"
+    ],
+    [
+     "&kp",
+     "LGUI"
+    ],
+    [
+     "&mo",
+     "1"
+    ],
+    [
+     "&kp",
+     "SPACE"
+    ],
+    [
+     "&kp",
+     "RET"
+    ],
+    [
+     "&mo",
+     "2"
+    ],
+    [
+     "&kp",
+     "RALT"
+    ]
+   ],
+   "positions": [
+    "&kp TAB",
+    "&kp Q",
+    "&kp W",
+    "&kp E",
+    "&kp R",
+    "&kp T",
+    "&kp Y",
+    "&kp U",
+    "&kp I",
+    "&kp O",
+    "&kp P",
+    "&kp BSPC",
+    "&kp LCTRL",
+    "&kp A",
+    "&kp S",
+    "&kp D",
+    "&kp F",
+    "&kp G",
+    "&kp H",
+    "&kp J",
+    "&kp K",
+    "&kp L",
+    "&kp SEMI",
+    "&kp SQT",
+    "&kp LSHFT",
+    "&kp Z",
+    "&kp X",
+    "&kp C",
+    "&kp V",
+    "&kp B",
+    "&kp N",
+    "&kp M",
+    "&kp COMMA",
+    "&kp DOT",
+    "&kp FSLH",
+    "&kp ESC",
+    "&kp LGUI",
+    "&mo 1",
+    "&kp SPACE",
+    "&kp RET",
+    "&mo 2",
+    "&kp RALT"
+   ],
+   "matrix": [
+    [
+     {
+      "top": "",
+      "label": "&kp TAB",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp TAB",
+      "impl_zmk": "&kp TAB",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 0,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp Q",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp Q",
+      "impl_zmk": "&kp Q",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 1,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp W",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp W",
+      "impl_zmk": "&kp W",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 2,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp E",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp E",
+      "impl_zmk": "&kp E",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 3,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp R",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp R",
+      "impl_zmk": "&kp R",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 4,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp T",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp T",
+      "impl_zmk": "&kp T",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 5,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp Y",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp Y",
+      "impl_zmk": "&kp Y",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 6,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp U",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp U",
+      "impl_zmk": "&kp U",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 7,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp I",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp I",
+      "impl_zmk": "&kp I",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 8,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp O",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp O",
+      "impl_zmk": "&kp O",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 9,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp P",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp P",
+      "impl_zmk": "&kp P",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 10,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp BSPC",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp BSPC",
+      "impl_zmk": "&kp BSPC",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 11,
+      "source": "reference"
+     }
+    ],
+    [
+     {
+      "top": "",
+      "label": "&kp LCTRL",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LCTRL",
+      "impl_zmk": "&kp LCTRL",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 12,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp A",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp A",
+      "impl_zmk": "&kp A",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 13,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp S",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp S",
+      "impl_zmk": "&kp S",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 14,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp D",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp D",
+      "impl_zmk": "&kp D",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 15,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp F",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp F",
+      "impl_zmk": "&kp F",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 16,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp G",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp G",
+      "impl_zmk": "&kp G",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 17,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp H",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp H",
+      "impl_zmk": "&kp H",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 18,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp J",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp J",
+      "impl_zmk": "&kp J",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 19,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp K",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp K",
+      "impl_zmk": "&kp K",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 20,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp L",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp L",
+      "impl_zmk": "&kp L",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 21,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp SEMI",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp SEMI",
+      "impl_zmk": "&kp SEMI",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 22,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp SQT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp SQT",
+      "impl_zmk": "&kp SQT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 23,
+      "source": "reference"
+     }
+    ],
+    [
+     {
+      "top": "",
+      "label": "&kp LSHFT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LSHFT",
+      "impl_zmk": "&kp LSHFT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 24,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp Z",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp Z",
+      "impl_zmk": "&kp Z",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 25,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp X",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp X",
+      "impl_zmk": "&kp X",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 26,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp C",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp C",
+      "impl_zmk": "&kp C",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 27,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp V",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp V",
+      "impl_zmk": "&kp V",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 28,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp B",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp B",
+      "impl_zmk": "&kp B",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 29,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N",
+      "impl_zmk": "&kp N",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 30,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp M",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp M",
+      "impl_zmk": "&kp M",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 31,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp COMMA",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp COMMA",
+      "impl_zmk": "&kp COMMA",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 32,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp DOT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp DOT",
+      "impl_zmk": "&kp DOT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 33,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp FSLH",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp FSLH",
+      "impl_zmk": "&kp FSLH",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 34,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp ESC",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp ESC",
+      "impl_zmk": "&kp ESC",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 35,
+      "source": "reference"
+     }
+    ]
+   ],
+   "thumbs": [
+    {
+     "top": "",
+     "label": "&kp LGUI",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp LGUI",
+     "impl_zmk": "&kp LGUI",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 36,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&mo 1",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&mo 1",
+     "impl_zmk": "&mo 1",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 37,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp SPACE",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp SPACE",
+     "impl_zmk": "&kp SPACE",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 38,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp RET",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp RET",
+     "impl_zmk": "&kp RET",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 39,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&mo 2",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&mo 2",
+     "impl_zmk": "&mo 2",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 40,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp RALT",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp RALT",
+     "impl_zmk": "&kp RALT",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 41,
+     "source": "reference"
+    }
+   ],
+   "source": "reference"
+  },
+  "lower_layer": {
+   "native_name": "lower_layer",
+   "display_name": "lower_layer",
+   "binding_count": 42,
+   "bindings": [
+    [
+     "&studio_unlock"
+    ],
+    [
+     "&studio_unlock"
+    ],
+    [
+     "&kp",
+     "N2"
+    ],
+    [
+     "&kp",
+     "N3"
+    ],
+    [
+     "&kp",
+     "N4"
+    ],
+    [
+     "&kp",
+     "N5"
+    ],
+    [
+     "&kp",
+     "N6"
+    ],
+    [
+     "&kp",
+     "N7"
+    ],
+    [
+     "&kp",
+     "N8"
+    ],
+    [
+     "&kp",
+     "N9"
+    ],
+    [
+     "&kp",
+     "N0"
+    ],
+    [
+     "&kp",
+     "BSPC"
+    ],
+    [
+     "&bt",
+     "BT_CLR"
+    ],
+    [
+     "&bt",
+     "BT_SEL",
+     "0"
+    ],
+    [
+     "&bt",
+     "BT_SEL",
+     "1"
+    ],
+    [
+     "&bt",
+     "BT_SEL",
+     "2"
+    ],
+    [
+     "&bt",
+     "BT_SEL",
+     "3"
+    ],
+    [
+     "&bt",
+     "BT_SEL",
+     "4"
+    ],
+    [
+     "&kp",
+     "LEFT"
+    ],
+    [
+     "&kp",
+     "DOWN"
+    ],
+    [
+     "&kp",
+     "UP"
+    ],
+    [
+     "&kp",
+     "RIGHT"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&studio_unlock"
+    ],
+    [
+     "&studio_unlock"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&kp",
+     "LGUI"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&kp",
+     "SPACE"
+    ],
+    [
+     "&kp",
+     "RET"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&kp",
+     "RALT"
+    ]
+   ],
+   "positions": [
+    "&studio_unlock",
+    "&studio_unlock",
+    "&kp N2",
+    "&kp N3",
+    "&kp N4",
+    "&kp N5",
+    "&kp N6",
+    "&kp N7",
+    "&kp N8",
+    "&kp N9",
+    "&kp N0",
+    "&kp BSPC",
+    "&bt BT_CLR",
+    "&bt BT_SEL 0",
+    "&bt BT_SEL 1",
+    "&bt BT_SEL 2",
+    "&bt BT_SEL 3",
+    "&bt BT_SEL 4",
+    "&kp LEFT",
+    "&kp DOWN",
+    "&kp UP",
+    "&kp RIGHT",
+    "&trans",
+    "&trans",
+    "&studio_unlock",
+    "&studio_unlock",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&kp LGUI",
+    "&trans",
+    "&kp SPACE",
+    "&kp RET",
+    "&trans",
+    "&kp RALT"
+   ],
+   "matrix": [
+    [
+     {
+      "top": "",
+      "label": "&studio_unlock",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&studio_unlock",
+      "impl_zmk": "&studio_unlock",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 0,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&studio_unlock",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&studio_unlock",
+      "impl_zmk": "&studio_unlock",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 1,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N2",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N2",
+      "impl_zmk": "&kp N2",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 2,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N3",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N3",
+      "impl_zmk": "&kp N3",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 3,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N4",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N4",
+      "impl_zmk": "&kp N4",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 4,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N5",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N5",
+      "impl_zmk": "&kp N5",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 5,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N6",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N6",
+      "impl_zmk": "&kp N6",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 6,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N7",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N7",
+      "impl_zmk": "&kp N7",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 7,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N8",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N8",
+      "impl_zmk": "&kp N8",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 8,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N9",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N9",
+      "impl_zmk": "&kp N9",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 9,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp N0",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp N0",
+      "impl_zmk": "&kp N0",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 10,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp BSPC",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp BSPC",
+      "impl_zmk": "&kp BSPC",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 11,
+      "source": "reference"
+     }
+    ],
+    [
+     {
+      "top": "",
+      "label": "&bt BT_CLR",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&bt BT_CLR",
+      "impl_zmk": "&bt BT_CLR",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 12,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&bt BT_SEL 0",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&bt BT_SEL 0",
+      "impl_zmk": "&bt BT_SEL 0",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 13,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&bt BT_SEL 1",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&bt BT_SEL 1",
+      "impl_zmk": "&bt BT_SEL 1",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 14,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&bt BT_SEL 2",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&bt BT_SEL 2",
+      "impl_zmk": "&bt BT_SEL 2",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 15,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&bt BT_SEL 3",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&bt BT_SEL 3",
+      "impl_zmk": "&bt BT_SEL 3",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 16,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&bt BT_SEL 4",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&bt BT_SEL 4",
+      "impl_zmk": "&bt BT_SEL 4",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 17,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp LEFT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LEFT",
+      "impl_zmk": "&kp LEFT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 18,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp DOWN",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp DOWN",
+      "impl_zmk": "&kp DOWN",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 19,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp UP",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp UP",
+      "impl_zmk": "&kp UP",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 20,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp RIGHT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp RIGHT",
+      "impl_zmk": "&kp RIGHT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 21,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 22,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 23,
+      "source": "reference"
+     }
+    ],
+    [
+     {
+      "top": "",
+      "label": "&studio_unlock",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&studio_unlock",
+      "impl_zmk": "&studio_unlock",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 24,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&studio_unlock",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&studio_unlock",
+      "impl_zmk": "&studio_unlock",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 25,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 26,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 27,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 28,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 29,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 30,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 31,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 32,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 33,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 34,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 35,
+      "source": "reference"
+     }
+    ]
+   ],
+   "thumbs": [
+    {
+     "top": "",
+     "label": "&kp LGUI",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp LGUI",
+     "impl_zmk": "&kp LGUI",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 36,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&trans",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&trans",
+     "impl_zmk": "&trans",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 37,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp SPACE",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp SPACE",
+     "impl_zmk": "&kp SPACE",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 38,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp RET",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp RET",
+     "impl_zmk": "&kp RET",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 39,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&trans",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&trans",
+     "impl_zmk": "&trans",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 40,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp RALT",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp RALT",
+     "impl_zmk": "&kp RALT",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 41,
+     "source": "reference"
+    }
+   ],
+   "source": "reference"
+  },
+  "raise_layer": {
+   "native_name": "raise_layer",
+   "display_name": "raise_layer",
+   "binding_count": 42,
+   "bindings": [
+    [
+     "&kp",
+     "TAB"
+    ],
+    [
+     "&kp",
+     "EXCL"
+    ],
+    [
+     "&kp",
+     "AT"
+    ],
+    [
+     "&kp",
+     "HASH"
+    ],
+    [
+     "&kp",
+     "DLLR"
+    ],
+    [
+     "&kp",
+     "PRCNT"
+    ],
+    [
+     "&kp",
+     "CARET"
+    ],
+    [
+     "&kp",
+     "AMPS"
+    ],
+    [
+     "&kp",
+     "ASTRK"
+    ],
+    [
+     "&kp",
+     "LPAR"
+    ],
+    [
+     "&kp",
+     "RPAR"
+    ],
+    [
+     "&kp",
+     "BSPC"
+    ],
+    [
+     "&kp",
+     "LCTRL"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&kp",
+     "MINUS"
+    ],
+    [
+     "&kp",
+     "EQUAL"
+    ],
+    [
+     "&kp",
+     "LBKT"
+    ],
+    [
+     "&kp",
+     "RBKT"
+    ],
+    [
+     "&kp",
+     "BSLH"
+    ],
+    [
+     "&kp",
+     "GRAVE"
+    ],
+    [
+     "&kp",
+     "LSHFT"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&kp",
+     "UNDER"
+    ],
+    [
+     "&kp",
+     "PLUS"
+    ],
+    [
+     "&kp",
+     "LBRC"
+    ],
+    [
+     "&kp",
+     "RBRC"
+    ],
+    [
+     "&kp",
+     "PIPE"
+    ],
+    [
+     "&kp",
+     "TILDE"
+    ],
+    [
+     "&kp",
+     "LGUI"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&kp",
+     "SPACE"
+    ],
+    [
+     "&kp",
+     "RET"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&kp",
+     "RALT"
+    ]
+   ],
+   "positions": [
+    "&kp TAB",
+    "&kp EXCL",
+    "&kp AT",
+    "&kp HASH",
+    "&kp DLLR",
+    "&kp PRCNT",
+    "&kp CARET",
+    "&kp AMPS",
+    "&kp ASTRK",
+    "&kp LPAR",
+    "&kp RPAR",
+    "&kp BSPC",
+    "&kp LCTRL",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&kp MINUS",
+    "&kp EQUAL",
+    "&kp LBKT",
+    "&kp RBKT",
+    "&kp BSLH",
+    "&kp GRAVE",
+    "&kp LSHFT",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&trans",
+    "&kp UNDER",
+    "&kp PLUS",
+    "&kp LBRC",
+    "&kp RBRC",
+    "&kp PIPE",
+    "&kp TILDE",
+    "&kp LGUI",
+    "&trans",
+    "&kp SPACE",
+    "&kp RET",
+    "&trans",
+    "&kp RALT"
+   ],
+   "matrix": [
+    [
+     {
+      "top": "",
+      "label": "&kp TAB",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp TAB",
+      "impl_zmk": "&kp TAB",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 0,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp EXCL",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp EXCL",
+      "impl_zmk": "&kp EXCL",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 1,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp AT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp AT",
+      "impl_zmk": "&kp AT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 2,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp HASH",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp HASH",
+      "impl_zmk": "&kp HASH",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 3,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp DLLR",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp DLLR",
+      "impl_zmk": "&kp DLLR",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 4,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp PRCNT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp PRCNT",
+      "impl_zmk": "&kp PRCNT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 5,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp CARET",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp CARET",
+      "impl_zmk": "&kp CARET",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 6,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp AMPS",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp AMPS",
+      "impl_zmk": "&kp AMPS",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 7,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp ASTRK",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp ASTRK",
+      "impl_zmk": "&kp ASTRK",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 8,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp LPAR",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LPAR",
+      "impl_zmk": "&kp LPAR",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 9,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp RPAR",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp RPAR",
+      "impl_zmk": "&kp RPAR",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 10,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp BSPC",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp BSPC",
+      "impl_zmk": "&kp BSPC",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 11,
+      "source": "reference"
+     }
+    ],
+    [
+     {
+      "top": "",
+      "label": "&kp LCTRL",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LCTRL",
+      "impl_zmk": "&kp LCTRL",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 12,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 13,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 14,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 15,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 16,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 17,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp MINUS",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp MINUS",
+      "impl_zmk": "&kp MINUS",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 18,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp EQUAL",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp EQUAL",
+      "impl_zmk": "&kp EQUAL",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 19,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp LBKT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LBKT",
+      "impl_zmk": "&kp LBKT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 20,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp RBKT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp RBKT",
+      "impl_zmk": "&kp RBKT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 21,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp BSLH",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp BSLH",
+      "impl_zmk": "&kp BSLH",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 22,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp GRAVE",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp GRAVE",
+      "impl_zmk": "&kp GRAVE",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 23,
+      "source": "reference"
+     }
+    ],
+    [
+     {
+      "top": "",
+      "label": "&kp LSHFT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LSHFT",
+      "impl_zmk": "&kp LSHFT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 24,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 25,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 26,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 27,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 28,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&trans",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&trans",
+      "impl_zmk": "&trans",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 29,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp UNDER",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp UNDER",
+      "impl_zmk": "&kp UNDER",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 30,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp PLUS",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp PLUS",
+      "impl_zmk": "&kp PLUS",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 31,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp LBRC",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LBRC",
+      "impl_zmk": "&kp LBRC",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 32,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp RBRC",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp RBRC",
+      "impl_zmk": "&kp RBRC",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 33,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp PIPE",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp PIPE",
+      "impl_zmk": "&kp PIPE",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 34,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp TILDE",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp TILDE",
+      "impl_zmk": "&kp TILDE",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 35,
+      "source": "reference"
+     }
+    ]
+   ],
+   "thumbs": [
+    {
+     "top": "",
+     "label": "&kp LGUI",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp LGUI",
+     "impl_zmk": "&kp LGUI",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 36,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&trans",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&trans",
+     "impl_zmk": "&trans",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 37,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp SPACE",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp SPACE",
+     "impl_zmk": "&kp SPACE",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 38,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp RET",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp RET",
+     "impl_zmk": "&kp RET",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 39,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&trans",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&trans",
+     "impl_zmk": "&trans",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 40,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp RALT",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp RALT",
+     "impl_zmk": "&kp RALT",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 41,
+     "source": "reference"
+    }
+   ],
+   "source": "reference"
+  },
+  "system_layer": {
+   "native_name": "system_layer",
+   "display_name": "SYSTEM",
+   "binding_count": 42,
+   "bindings": [
+    [
+     "&kp",
+     "TAB"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&msc_up"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&mmv_up"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&kp",
+     "BSPC"
+    ],
+    [
+     "&kp",
+     "LCTRL"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&msc_left"
+    ],
+    [
+     "&msc_down"
+    ],
+    [
+     "&msc_right"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&mmv_left"
+    ],
+    [
+     "&mmv_down"
+    ],
+    [
+     "&mmv_right"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&kp",
+     "LSHFT"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&mkp_lclk"
+    ],
+    [
+     "&mkp_mclk"
+    ],
+    [
+     "&mkp_rclk"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&mkp_lclk"
+    ],
+    [
+     "&mkp_mclk"
+    ],
+    [
+     "&mkp_rclk"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&none"
+    ],
+    [
+     "&kp",
+     "LGUI"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&kp",
+     "SPACE"
+    ],
+    [
+     "&kp",
+     "RET"
+    ],
+    [
+     "&trans"
+    ],
+    [
+     "&kp",
+     "RALT"
+    ]
+   ],
+   "positions": [
+    "&kp TAB",
+    "&none",
+    "&msc_up",
+    "&none",
+    "&none",
+    "&none",
+    "&none",
+    "&none",
+    "&mmv_up",
+    "&none",
+    "&none",
+    "&kp BSPC",
+    "&kp LCTRL",
+    "&none",
+    "&msc_left",
+    "&msc_down",
+    "&msc_right",
+    "&none",
+    "&none",
+    "&mmv_left",
+    "&mmv_down",
+    "&mmv_right",
+    "&none",
+    "&none",
+    "&kp LSHFT",
+    "&none",
+    "&mkp_lclk",
+    "&mkp_mclk",
+    "&mkp_rclk",
+    "&none",
+    "&none",
+    "&mkp_lclk",
+    "&mkp_mclk",
+    "&mkp_rclk",
+    "&none",
+    "&none",
+    "&kp LGUI",
+    "&trans",
+    "&kp SPACE",
+    "&kp RET",
+    "&trans",
+    "&kp RALT"
+   ],
+   "matrix": [
+    [
+     {
+      "top": "",
+      "label": "&kp TAB",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp TAB",
+      "impl_zmk": "&kp TAB",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 0,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 1,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&msc_up",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&msc_up",
+      "impl_zmk": "&msc_up",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 2,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 3,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 4,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 5,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 6,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 7,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mmv_up",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mmv_up",
+      "impl_zmk": "&mmv_up",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 8,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 9,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 10,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&kp BSPC",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp BSPC",
+      "impl_zmk": "&kp BSPC",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 11,
+      "source": "reference"
+     }
+    ],
+    [
+     {
+      "top": "",
+      "label": "&kp LCTRL",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LCTRL",
+      "impl_zmk": "&kp LCTRL",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 12,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 13,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&msc_left",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&msc_left",
+      "impl_zmk": "&msc_left",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 14,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&msc_down",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&msc_down",
+      "impl_zmk": "&msc_down",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 15,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&msc_right",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&msc_right",
+      "impl_zmk": "&msc_right",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 16,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 17,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 18,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mmv_left",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mmv_left",
+      "impl_zmk": "&mmv_left",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 19,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mmv_down",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mmv_down",
+      "impl_zmk": "&mmv_down",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 20,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mmv_right",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mmv_right",
+      "impl_zmk": "&mmv_right",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 21,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 22,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 23,
+      "source": "reference"
+     }
+    ],
+    [
+     {
+      "top": "",
+      "label": "&kp LSHFT",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&kp LSHFT",
+      "impl_zmk": "&kp LSHFT",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 24,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 25,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mkp_lclk",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mkp_lclk",
+      "impl_zmk": "&mkp_lclk",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 26,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mkp_mclk",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mkp_mclk",
+      "impl_zmk": "&mkp_mclk",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 27,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mkp_rclk",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mkp_rclk",
+      "impl_zmk": "&mkp_rclk",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 28,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 29,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 30,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mkp_lclk",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mkp_lclk",
+      "impl_zmk": "&mkp_lclk",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 31,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mkp_mclk",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mkp_mclk",
+      "impl_zmk": "&mkp_mclk",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 32,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&mkp_rclk",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&mkp_rclk",
+      "impl_zmk": "&mkp_rclk",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 33,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 34,
+      "source": "reference"
+     },
+     {
+      "top": "",
+      "label": "&none",
+      "sub": "",
+      "behavior": "binding cru da referência de firmware",
+      "binding": "&none",
+      "impl_zmk": "&none",
+      "impl_qmk": "",
+      "key_type": "normal",
+      "status": "reference",
+      "position": 35,
+      "source": "reference"
+     }
+    ]
+   ],
+   "thumbs": [
+    {
+     "top": "",
+     "label": "&kp LGUI",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp LGUI",
+     "impl_zmk": "&kp LGUI",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 36,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&trans",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&trans",
+     "impl_zmk": "&trans",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 37,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp SPACE",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp SPACE",
+     "impl_zmk": "&kp SPACE",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 38,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp RET",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp RET",
+     "impl_zmk": "&kp RET",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 39,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&trans",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&trans",
+     "impl_zmk": "&trans",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 40,
+     "source": "reference"
+    },
+    {
+     "top": "",
+     "label": "&kp RALT",
+     "sub": "",
+     "behavior": "binding cru da referência de firmware",
+     "binding": "&kp RALT",
+     "impl_zmk": "&kp RALT",
+     "impl_qmk": "",
+     "key_type": "normal",
+     "status": "reference",
+     "position": 41,
+     "source": "reference"
+    }
+   ],
+   "source": "reference"
+  }
+ },
+ "total_keys_expected": 42,
+ "notes": "Nomes nativos preservados do devicetree. Nenhum rótulo do candidato aplicado por correspondência automática. Slots inexistentes não são preenchidos com transparentes."
+}

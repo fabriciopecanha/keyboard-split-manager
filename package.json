@@ -1,0 +1,27 @@
+{
+  "name": "keyboard-split-manager",
+  "version": "0.1.0-beta",
+  "description": "Visual keymap editor and manager for split ergonomic keyboards (Corne and Sofle)",
+  "main": "app/ksm_core.js",
+  "scripts": {
+    "test": "node app/test_html_final.js deliverables/keyboard_split_manager_v19_perfis.html",
+    "test:all": "pytest tests/ -v && node app/test_html_final.js deliverables/keyboard_split_manager_v19_perfis.html",
+    "build": "python3 app/build_app_v06.py --out deliverables/keyboard_split_manager_v19_perfis.html --force"
+  },
+  "keywords": [
+    "keyboard",
+    "split-keyboard",
+    "keymap",
+    "corne",
+    "sofle",
+    "zmk",
+    "qmk",
+    "vial",
+    "ergonomics"
+  ],
+  "author": "Fabrício Peçanha",
+  "license": "MIT",
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}
